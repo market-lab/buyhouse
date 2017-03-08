@@ -1,0 +1,12 @@
+/*******   Our SASS   *******/
+/* Variables */
+/* RGB */
+/* Mixins */
+/* General */
+body h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400; }
+
+body p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400; }

@@ -1,0 +1,43 @@
+{
+  "name": "landing-page-buy-house",
+  "version": "1.0.0",
+  "description": "Internal landing page template for buy house",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/market-lab/buyhouse.git"
+  },
+  "author": "MarketLab",
+  "contributors": [
+    "Gustavo Sobral <ghsobral@gmail.com>"
+  ],
+  "keywords": [
+    "landing-page",
+    "responsive",
+    "sass"
+  ],
+  "bugs": {
+    "url": "https://github.com/market-lab/buyhouse/issues"
+  },
+  "homepage": "https://github.com/market-lab/buyhouse#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.11",
+    "gulp-cli": "^1.2.1",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-sass": "^2.3.2",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-svgstore": "^6.0.0",
+    "gulp-uglify": "^1.5.4",
+    "materialize-css": "^0.97.8",
+    "run-sequence": "^1.2.2"
+  },
+  "license": "UNLICENSED"
+}
