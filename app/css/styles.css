@@ -188,7 +188,7 @@ nav {
         -o-transition: all 0.3s;
         transition: all 0.3s; }
     nav #nav-desktop .nav-list .dropdown-item-3 {
-      background-color: #07A6E5;
+      background-color: #024AA0;
       color: #fff !important;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
@@ -196,7 +196,7 @@ nav {
       -o-transition: all 0.3s;
       transition: all 0.3s; }
       nav #nav-desktop .nav-list .dropdown-item-3:hover {
-        border-left: 7px solid #07A6E5;
+        border-left: 7px solid #024AA0;
         background-color: #fff;
         color: #505050 !important;
         box-sizing: border-box;
@@ -258,7 +258,7 @@ nav {
         display: none; } }
   @media only screen and (min-width: 996px) {
     nav #nav-desktop .call-button {
-      padding: 31px 0; } }
+      padding: 33px 0; } }
   nav #nav-desktop .call-button i {
     display: inline-block;
     padding: 5px;
@@ -266,12 +266,11 @@ nav {
     margin-right: 5px;
     font-size: 20px; }
   nav #nav-desktop .call-button span {
-    font-family: 'Oswald';
-    font-weight: 400;
+    font-family: 'Martel', serif;
     min-width: 187px;
-    padding: 5px 10px 5px 10px;
-    font-size: 20px;
-    margin-right: 60px;
+    padding: 5px;
+    font-size: 15px;
+    margin-right: 10px;
     background-color: #fff;
     color: #0E3744;
     list-style-type: none;
@@ -376,7 +375,7 @@ nav {
   background: none;
   padding: 0; }
   #call-btn-mobile button {
-    background-color: #07A6E5;
+    background-color: #024AA0;
     border: none;
     padding: 10px;
     width: 100%;
@@ -410,12 +409,13 @@ nav {
 
 /* Header */
 header {
-  background: url("https://s3.amazonaws.com/market-lab-2.0/marketlab-digital-marketing-agency-header.jpg");
+  background: url("https://s3.us-east-2.amazonaws.com/cash-house-express/sell-your-house-header.jpg");
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-size: cover;
   background-size: cover;
   color: #fff;
   z-index: 1 !important;
@@ -428,6 +428,27 @@ header {
   @media only screen and (max-width: 350px) {
     header {
       margin-top: 70px !important; } }
+  header .mask {
+    background-color: #34a7d7;
+    opacity: 0.8;
+    position: absolute;
+    padding-top: 530px;
+    width: 100%;
+    margin: 0 -5px;
+    -webkit-clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%);
+    clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%); }
+    @media only screen and (max-width: 996px) {
+      header .mask {
+        padding-top: 526px;
+        opacity: 0.8;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } }
+    @media only screen and (max-width: 1121px) {
+      header .mask {
+        padding-top: 550px; } }
+    @media only screen and (max-width: 996px) {
+      header .mask {
+        padding-top: 526px; } }
   header .header-content {
     position: relative;
     height: 100%;
@@ -439,18 +460,30 @@ header {
       header .header-content {
         padding: 10px 0 !important; } }
     header .header-content h1 {
-      font-family: 'Quicksand', sans-serif;
+      color: #fff;
+      text-align: left;
+      font-family: 'Martel', serif;
       font-weight: 400;
       font-size: 1.5em;
-      padding: 15px 10px;
-      margin: 0;
-      text-shadow: -4px 3px 14px rgba(0, 0, 0, 0.9); }
+      padding: 15px 50px;
+      margin: 0; }
+      @media only screen and (max-width: 996px) {
+        header .header-content h1 {
+          text-shadow: -4px 3px 14px rgba(0, 0, 0, 0.9);
+          text-align: center; } }
     header .header-content h2 {
-      font-size: 4.5em;
+      color: #fff;
+      font-family: 'Martel', serif;
+      font-weight: bolder;
+      text-align: left;
+      font-size: 3.5em;
       margin: 0;
-      padding: 15px;
-      line-height: 75px;
-      text-shadow: -4px 3px 14px rgba(0, 0, 0, 0.9); }
+      padding: 15px 50px;
+      line-height: 75px; }
+      @media only screen and (max-width: 996px) {
+        header .header-content h2 {
+          text-shadow: -4px 3px 14px rgba(0, 0, 0, 0.9);
+          text-align: center; } }
       @media only screen and (max-width: 420px) {
         header .header-content h2 {
           font-size: 3.2em;
@@ -466,44 +499,77 @@ header {
           padding: 10px;
           line-height: 45px; } }
     header .header-content p {
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      text-align: left;
       font-size: 1.6em;
       max-width: 600px;
-      margin: 0 auto;
+      margin: 0;
       display: block;
       line-height: 1.4em;
-      padding: 15px;
-      text-shadow: -4px 3px 14px rgba(0, 0, 0, 0.9); }
+      padding: 15px 50px; }
+      @media only screen and (max-width: 996px) {
+        header .header-content p {
+          text-align: center;
+          max-width: 100%;
+          text-shadow: -4px 3px 14px rgba(0, 0, 0, 0.9); } }
       @media only screen and (max-width: 330px) {
         header .header-content p {
           padding: 10px;
           font-size: 1.4em; } }
-    header .header-content button {
-      background: #fff;
-      border: none;
-      color: #E14D43;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      font-size: 30px;
-      width: 200px;
-      height: 60px;
-      margin: 15px auto 30px auto;
-      -webkit-transition: all, 0.4s;
-      -moz-transition: all, 0.4s;
-      -ms-transition: all, 0.4s;
-      -o-transition: all, 0.4s;
-      transition: all, 0.4s; }
-      header .header-content button:hover {
-        background-color: #E14D43;
+    header .header-content a {
+      padding: 0 50px; }
+      header .header-content a button {
+        border: none;
         color: #fff;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        font-size: 30px;
+        padding: 0 90px;
+        height: 60px;
+        margin: 15px 0 30px 0;
+        background: #00d172;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #00d172 0%, #00A672 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00d172), color-stop(100%, #00A672));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #00d172 0%, #00A672 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #00d172 0%, #00A672 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #00d172 0%, #00A672 100%);
+        /* IE10+ */
+        background: linear-gradient(to bottom, #00d172 0%, #00A672 100%);
+        /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+        /* IE6-9 */
+        -webkit-box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.25);
         -webkit-transition: all, 0.4s;
         -moz-transition: all, 0.4s;
         -ms-transition: all, 0.4s;
         -o-transition: all, 0.4s;
-        transition: all, 0.4s;
-        -webkit-box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.65);
-        -moz-box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.65);
-        box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.65); }
+        transition: all, 0.4s; }
+        header .header-content a button:hover {
+          background-color: #E14D43;
+          color: #fff;
+          -webkit-transition: all, 0.4s;
+          -moz-transition: all, 0.4s;
+          -ms-transition: all, 0.4s;
+          -o-transition: all, 0.4s;
+          transition: all, 0.4s;
+          -webkit-box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.65);
+          -moz-box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.65);
+          box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.65); }
+        @media only screen and (max-width: 996px) {
+          header .header-content a button {
+            font-size: 21px;
+            display: block;
+            margin: 0 auto;
+            padding: 0 20px; } }
 
 /* About */
 #about {
@@ -663,7 +729,7 @@ header {
     font-family: 'Quicksand';
     font-weight: 400; }
   #contact .input-field .prefix.active {
-    color: #07A6E5; }
+    color: #024AA0; }
   #contact .material-icons {
     color: #0470BA;
     padding: 5px;
