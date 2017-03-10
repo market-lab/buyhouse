@@ -342,32 +342,41 @@ header {
   margin-top: 72px !important;
   padding-left: 5px;
   padding-right: 5px; }
+  @media only screen and (max-width: 992px) {
+    header {
+      background: url("");
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-color: #f5f5f5; } }
   @media only screen and (max-width: 400px) {
     header {
       margin-top: 80px !important; } }
   @media only screen and (max-width: 350px) {
     header {
       margin-top: 70px !important; } }
+  header img {
+    max-width: 100%; }
+    @media only screen and (min-width: 993px) {
+      header img {
+        display: none; } }
   header .mask {
     background-color: rgba(52, 167, 215, 0.95);
     position: absolute;
-    padding-top: 530px;
+    height: 530px;
     width: 100%;
     margin: 0 -5px;
     -webkit-clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%);
     clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%); }
     @media only screen and (max-width: 996px) {
       header .mask {
-        padding-top: 526px;
-        opacity: 0.8;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } }
-    @media only screen and (max-width: 1121px) {
+        height: 570px; } }
+    @media only screen and (max-width: 992px) {
       header .mask {
-        padding-top: 550px; } }
-    @media only screen and (max-width: 996px) {
-      header .mask {
-        padding-top: 526px; } }
+        display: none; } }
   header .header-content {
     position: relative;
     height: 100%;
@@ -386,10 +395,11 @@ header {
       font-size: 1.5em;
       padding: 15px 50px;
       margin: 0; }
-      @media only screen and (max-width: 996px) {
+      @media only screen and (max-width: 992px) {
         header .header-content h1 {
-          text-shadow: -4px 3px 14px rgba(0, 0, 0, 0.9);
-          text-align: center; } }
+          text-align: center;
+          font-size: 1.5em;
+          color: #021F2D; } }
     header .header-content h2 {
       color: #fff;
       font-family: 'Martel', serif;
@@ -399,24 +409,13 @@ header {
       margin: 0;
       padding: 15px 50px;
       line-height: 75px; }
-      @media only screen and (max-width: 996px) {
+      @media only screen and (max-width: 992px) {
         header .header-content h2 {
-          text-shadow: -4px 3px 14px rgba(0, 0, 0, 0.9);
-          text-align: center; } }
-      @media only screen and (max-width: 420px) {
-        header .header-content h2 {
-          font-size: 3.2em;
-          line-height: 60px; } }
-      @media only screen and (max-width: 350px) {
-        header .header-content h2 {
-          font-size: 2.8em;
-          padding: 10px;
-          line-height: 50px; } }
-      @media only screen and (max-width: 330px) {
-        header .header-content h2 {
-          font-size: 2.5em;
-          padding: 10px;
-          line-height: 45px; } }
+          color: #021F2D;
+          text-align: center;
+          font-size: 3em !important;
+          line-height: 45px !important;
+          padding: 15px; } }
     header .header-content p {
       color: #fff;
       font-family: 'Raleway', sans-serif;
@@ -427,22 +426,26 @@ header {
       display: block;
       line-height: 1.4em;
       padding: 15px 50px; }
-      @media only screen and (max-width: 996px) {
+      @media only screen and (max-width: 992px) {
         header .header-content p {
           text-align: center;
           max-width: 100%;
-          text-shadow: -4px 3px 14px rgba(0, 0, 0, 0.9); } }
+          color: #021F2D; } }
       @media only screen and (max-width: 330px) {
         header .header-content p {
           padding: 10px;
           font-size: 1.4em; } }
-    header .header-content button {
-      font-size: 25px;
-      padding: 0 30px;
-      height: 60px;
-      margin: 15px 0 30px 0; }
     header .header-content a {
-      padding: 0 50px; }
+      padding: 0 50px;
+      margin: 0 auto; }
+      header .header-content a button {
+        font-size: 25px;
+        padding: 0 30px;
+        height: 60px;
+        margin: 15px 0 30px 50px; }
+        @media only screen and (max-width: 992px) {
+          header .header-content a button {
+            margin: 0 auto; } }
 
 /* About */
 #about {
@@ -450,7 +453,7 @@ header {
   padding: 80px; }
   @media only screen and (max-width: 991px) {
     #about {
-      padding: 80px 25px; } }
+      padding: 25px 25px 80px; } }
   #about img {
     display: block;
     margin: 0 auto;
