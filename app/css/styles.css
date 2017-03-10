@@ -482,46 +482,6 @@ header {
     color: #636363;
     margin: 10px auto 0 auto; }
 
-/* About */
-#advantages {
-  padding: 80px 0 30px; }
-  @media only screen and (max-width: 991px) {
-    #advantages {
-      padding: 0 25px;
-      text-align: center; } }
-  #advantages h1 {
-    text-align: center; }
-  #advantages p {
-    font-size: 15px; }
-  #advantages .box {
-    display: block;
-    margin: 50px auto;
-    max-width: 700px;
-    padding: 10px;
-    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2); }
-    @media only screen and (max-width: 991px) {
-      #advantages .box {
-        max-width: 400px; } }
-    #advantages .box img {
-      display: block;
-      margin: 0 auto; }
-    @media only screen and (max-width: 991px) {
-      #advantages .box .desktop {
-        display: none; } }
-    @media only screen and (min-width: 992px) {
-      #advantages .box .mobile {
-        display: none; } }
-  #advantages a {
-    display: table;
-    margin: 0 auto; }
-    #advantages a button {
-      font-size: 25px;
-      padding: 0 30px;
-      height: 80px;
-      margin: 15px 0 30px 0; }
-
 /* Sell Your House */
 #sell-your-house {
   background: #f2f2f2;
@@ -576,6 +536,83 @@ header {
         font-size: 30px;
         color: #024AA0;
         padding: 0; }
+
+/* Advantages */
+#advantages {
+  padding: 30px 15px; }
+  #advantages h2 {
+    color: #024AA0;
+    text-align: center;
+    margin: 15px auto; }
+  #advantages .advantages-card {
+    display: block;
+    background: #fff;
+    margin: 30px auto 0 auto;
+    width: 90%;
+    position: relative;
+    z-index: 10;
+    max-width: 700px; }
+    @media only screen and (max-width: 992px) {
+      #advantages .advantages-card {
+        text-align: center; } }
+    #advantages .advantages-card h3 {
+      font-family: 'Martel', serif;
+      font-weight: 400;
+      color: #024AA0;
+      padding: 10px 0 5px 0; }
+    #advantages .advantages-card p {
+      font-size: 18px;
+      padding-bottom: 20px;
+      max-width: 500px;
+      margin: 0 auto; }
+    #advantages .advantages-card img {
+      max-width: 180px;
+      display: block;
+      margin: 20px auto 0 auto; }
+    #advantages .advantages-card .sold-img {
+      margin: 10px auto; }
+
+.slide-effect {
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block; }
+  .slide-effect .advantages-card {
+    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5); }
+  .slide-effect .cta-button {
+    border: 1px solid #d1d1d1;
+    transform: translate(0, -71px);
+    background: #fff;
+    position: relative;
+    z-index: -1;
+    display: block;
+    margin: 0 auto;
+    padding: 5px 0;
+    width: 90%;
+    max-width: 698px;
+    transition: all 0.2s;
+    -webkit-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4); }
+    @media only screen and (max-width: 992px) {
+      .slide-effect .cta-button {
+        transform: translate(0, 0); } }
+    .slide-effect .cta-button button {
+      font-size: 20px;
+      padding: 0 20px;
+      height: 40px;
+      margin: 10px auto;
+      display: block; }
+  .slide-effect:hover .advantages-card {
+    -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4); }
+  .slide-effect:hover .cta-button {
+    transform: translate(0, 0);
+    transition: all 0.2s;
+    z-index: 2; }
 
 /* Slogan */
 #slogan {
