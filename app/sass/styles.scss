@@ -6,7 +6,6 @@
 /* RGB */
 
 $dark-blue: #0470BA;
-$red: #E14D43;
 $blue: #024AA0;
 $dark-navy-blue: #021F2D;
 $navy-blue: #0E3744;
@@ -83,7 +82,7 @@ $light-grey: #C1C1C1;
 body {
     margin-bottom: -20px;
     transition: background-color .5s;
-    h1, h2 {
+    h1, h2, {
         font-family: 'Martel', sans-serif;
         font-weight:  400;
         margin: 0;
@@ -91,6 +90,8 @@ body {
     p , button{ font-family: 'Raleway', sans-serif; }
     .row { margin: 0; }
 }
+
+.col-md-4, .col-lg-4 { padding: 0; }
 
 .valign-wrapper { position: relative; }
 
@@ -144,6 +145,7 @@ button:focus { outline: none; }
 /* Navbar General */
 nav {
     height: 70px;
+    background: #fff;
     border-radius: 0 !important;
     @include box-shadow (0, 2px, 3px, 0, rgba(0, 0, 0, 0.5)) ;
     z-index: 999 !important;
@@ -186,11 +188,11 @@ nav {
     .nav-list {
         font-family: 'Raleway';
         font-weight: 400;
-        padding: 0 !important;
-
+        float: left;
+        @media only screen and ( max-width: 1350px ) { padding-left: 40px; }
         ul { margin: 0; padding: 0; }
         li {
-            margin: 23px 10px;
+            margin: 22px 10px;
             display: inline-block;
             .nav-list-item {
                 color: #7c7c7c;
@@ -213,7 +215,9 @@ nav {
                 @include border-radius (20px);
                 padding: 5px 20px;
                 font-size: 18px;
-                margin: 16px 0;
+                margin: 15px 0;
+                float: right;
+                border: 1px solid #00875c;
             }
         }
     }
@@ -340,7 +344,7 @@ header{
     background-size: cover;
     color: #fff;
     z-index: 1 !important;
-    margin-top: 72px !important;
+    margin-top: 70px !important;
     padding-left: 5px;
     padding-right: 5px;
     @media only screen and ( max-width: 400px ) { margin-top: 80px !important; }
@@ -349,7 +353,7 @@ header{
     .mask{
         background-color: rgba(52, 167, 215, 0.95);
         position: absolute;
-        padding-top: 530px;
+        height: 529px;
         width: 100%;
         margin: 0 -5px;
         -webkit-clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%);
@@ -461,25 +465,15 @@ header{
     padding: 80px;
     @media only screen and (max-width: 991px){padding: 80px 25px;}
     img {
-        display: block;
-        margin: 0 auto;
-        max-width: 200px;
-        
-        /*
-        background: rgba(14,55,68,1);
-        background: -moz-linear-gradient(-45deg, rgba(14,55,68,1) 0%, rgba(2,31,45,1) 100%);
-        background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(14,55,68,1)), color-stop(100%, rgba(2,31,45,1)));
-        background: -webkit-linear-gradient(-45deg, rgba(14,55,68,1) 0%, rgba(2,31,45,1) 100%);
-        background: -o-linear-gradient(-45deg, rgba(14,55,68,1) 0%, rgba(2,31,45,1) 100%);
-        background: -ms-linear-gradient(-45deg, rgba(14,55,68,1) 0%, rgba(2,31,45,1) 100%);
-        background: linear-gradient(135deg, rgba(14,55,68,1) 0%, rgba(2,31,45,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e3744', endColorstr='#021f2d', GradientType=1 );
-        */
-    }
+        max-width:  300px;
+        padding: 30px;
+        padding-bottom: 10px;
+        margin-top: 50px;
+        max-width:  96%;  }
 
     h1 {
         margin-top: 30px;
-        font-size: 2.7em;                
+        font-size: 2.7em;
         color:  $dark-navy-blue;
         @media only screen and (max-width: 330px) {font-size: 2.4em;}
     }
@@ -495,15 +489,15 @@ header{
 /* About */
 #advantages{
 
-    padding: 80px 0 30px;     
-    
+    padding: 80px 0 30px;
+
     @media only screen and (max-width: 991px) {
         padding: 0 25px;
-        text-align: center; 
-    }    
+        text-align: center;
+    }
 
     h1 {
-        text-align: center;        
+        text-align: center;
     }
 
     p{
@@ -522,9 +516,9 @@ header{
             display: block;
             margin: 0 auto;
         }
-        
+
         .desktop{@media only screen and (max-width: 991px) {display:none; }}
-        .mobile{@media only screen and (min-width: 992px) {display:none; }} 
+        .mobile{@media only screen and (min-width: 992px) {display:none; }}
     }
 
     a{
@@ -539,6 +533,52 @@ header{
     }
 }
 
+/* Sell Your House */
+
+#sell-your-house {
+    background: #f2f2f2;
+    padding: 30px 0;
+    h2 {
+        text-align: center;
+        color: $blue;
+        font-size: 2.4em; }
+    h3 {
+        text-align: center;
+        color: $blue;
+        font-size: 1.8em;
+        padding: 12px 0;
+        margin: 0; }
+    .step-cards {
+        display: block;
+        margin: 0 auto;
+        max-width: 1110px;
+        @media only screen and (max-width: 1250px) { max-width: 1020px; }
+        @media only screen and (max-width: 1150px) { max-width: 960px; }
+        .step-card {
+            background: #fff;
+            margin: 20px 10px;
+            max-width: 350px;
+            @include box-shadow (0, 3px, 5px, 0, rgba(0, 0, 0, 0.3));
+            @media only screen and (max-width: 1250px) { max-width: 320px; }
+            @media only screen and (max-width: 1150px) { max-width: 300px; }
+            @media only screen and (max-width: 400px) { max-width: 94%; }
+            @media only screen and (max-width: 990px) {
+                margin: 20px auto; }
+            h3 {
+                font-family: 'Raleway', sans-serif;
+                font-size: 23px;  }
+            img {
+                width: 100%;
+                padding: 0; }
+            span {
+                font-family: 'Martel', serif;
+                font-size: 30px;
+                color: $blue;
+                padding: 0;
+            }
+        }
+    }
+}
 
 /* Slogan */
 
@@ -692,7 +732,7 @@ footer {
     .footer-nav {
         background-color: #fff;
         @media only screen and (max-width: 750px) { display: none; }
-        ul {            
+        ul {
             display: table;
             margin: 0 auto;
             padding: 10px 0;
