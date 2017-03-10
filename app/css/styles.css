@@ -446,13 +446,15 @@ header {
 
 /* About */
 #about {
-  background-color: #fff; }
+  background-color: #fff;
+  padding: 80px; }
+  @media only screen and (max-width: 991px) {
+    #about {
+      padding: 80px 25px; } }
   #about img {
-    max-width: 300px;
-    padding: 30px;
-    padding-bottom: 10px;
-    margin-top: 50px;
-    max-width: 96%;
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
     /*
         background: rgba(14,55,68,1);
         background: -moz-linear-gradient(-45deg, rgba(14,55,68,1) 0%, rgba(2,31,45,1) 100%);
@@ -466,8 +468,6 @@ header {
   #about h1 {
     margin-top: 30px;
     font-size: 2.7em;
-    padding: 0 0 20px 0;
-    line-height: 50px;
     color: #021F2D; }
     @media only screen and (max-width: 330px) {
       #about h1 {
@@ -476,7 +476,47 @@ header {
     max-width: 750px;
     font-size: 1.6em;
     color: #636363;
-    margin: 10px auto 55px auto; }
+    margin: 10px auto 0 auto; }
+
+/* About */
+#advantages {
+  padding: 80px 0 30px; }
+  @media only screen and (max-width: 991px) {
+    #advantages {
+      padding: 0 25px;
+      text-align: center; } }
+  #advantages h1 {
+    text-align: center; }
+  #advantages p {
+    font-size: 15px; }
+  #advantages .box {
+    display: block;
+    margin: 50px auto;
+    max-width: 700px;
+    padding: 10px;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2); }
+    @media only screen and (max-width: 991px) {
+      #advantages .box {
+        max-width: 400px; } }
+    #advantages .box img {
+      display: block;
+      margin: 0 auto; }
+    @media only screen and (max-width: 991px) {
+      #advantages .box .desktop {
+        display: none; } }
+    @media only screen and (min-width: 992px) {
+      #advantages .box .mobile {
+        display: none; } }
+  #advantages a {
+    display: table;
+    margin: 0 auto; }
+    #advantages a button {
+      font-size: 25px;
+      padding: 0 30px;
+      height: 80px;
+      margin: 15px 0 30px 0; }
 
 /* Slogan */
 #slogan {
@@ -643,8 +683,7 @@ footer {
       footer .footer-nav {
         display: none; } }
     footer .footer-nav ul {
-      max-width: 946px;
-      display: block;
+      display: table;
       margin: 0 auto;
       padding: 10px 0;
       background-color: #fff; }
@@ -652,7 +691,7 @@ footer {
         display: inline-block;
         font-family: 'Quicksand';
         font-weight: 400;
-        padding: 10px 15px;
+        padding: 10px 20px;
         font-size: 18px;
         color: #0E3744;
         border-radius: 4px;
