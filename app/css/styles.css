@@ -375,14 +375,18 @@ header {
   header .mask {
     background-color: rgba(52, 167, 215, 0.95);
     position: absolute;
-    height: 530px;
+    height: 477px;
     width: 100%;
     margin: 0 -5px;
     -webkit-clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%);
     clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%); }
-    @media only screen and (max-width: 996px) {
+    @media only screen and (max-width: 1385px) {
       header .mask {
-        height: 570px; } }
+        -webkit-clip-path: polygon(0 0, 520px 0, 580px 100%, 0% 100%);
+        clip-path: polygon(0 0, 500px 0, 560px 100%, 0% 100%); } }
+    @media only screen and (max-width: 997px) {
+      header .mask {
+        height: 517px; } }
     @media only screen and (max-width: 992px) {
       header .mask {
         display: none; } }
@@ -398,34 +402,27 @@ header {
         padding: 10px 0 !important; } }
     header .header-content h1 {
       color: #fff;
-      text-align: left;
-      font-family: 'Martel', serif;
-      font-weight: 400;
-      font-size: 1.5em;
-      padding: 15px 50px;
-      margin: 0; }
-      @media only screen and (max-width: 992px) {
-        header .header-content h1 {
-          text-align: center;
-          font-size: 1.5em;
-          color: #021F2D; } }
-    header .header-content h2 {
-      color: #fff;
       font-family: 'Martel', serif;
       font-weight: bolder;
       text-align: left;
-      font-size: 3.5em;
+      font-size: 3em;
       margin: 0;
       padding: 15px 50px;
       line-height: 75px; }
+      @media only screen and (max-width: 1385px) {
+        header .header-content h1 {
+          font-size: 2.6em;
+          line-height: 50px;
+          margin: 25px 0; } }
       @media only screen and (max-width: 992px) {
-        header .header-content h2 {
+        header .header-content h1 {
           color: #021F2D;
           text-align: center;
-          font-size: 3em !important;
+          font-size: 2em !important;
           line-height: 45px !important;
-          padding: 15px; } }
-    header .header-content p {
+          padding: 15px;
+          margin: 0; } }
+    header .header-content h2 {
       color: #fff;
       font-family: 'Raleway', sans-serif;
       text-align: left;
@@ -436,14 +433,15 @@ header {
       line-height: 1.4em;
       padding: 15px 50px; }
       @media only screen and (max-width: 992px) {
-        header .header-content p {
+        header .header-content h2 {
           text-align: center;
-          max-width: 100%;
-          color: #021F2D; } }
+          color: #021F2D;
+          font-size: 1.4em;
+          padding: 0 20px;
+          margin: 0 auto; } }
       @media only screen and (max-width: 330px) {
-        header .header-content p {
-          padding: 10px;
-          font-size: 1.4em; } }
+        header .header-content h2 {
+          padding: 10px; } }
     header .header-content a {
       padding: 0 50px;
       margin: 0 auto; }
@@ -454,7 +452,9 @@ header {
         margin: 15px 0 30px 50px; }
         @media only screen and (max-width: 992px) {
           header .header-content a button {
-            margin: 0 auto; } }
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 1.5em; } }
 
 /* About */
 #about {
@@ -462,25 +462,22 @@ header {
   padding: 80px; }
   @media only screen and (max-width: 991px) {
     #about {
-      padding: 25px 25px 80px; } }
+      padding: 40px 10px; } }
   #about img {
-    max-width: 300px;
-    padding: 30px;
-    padding-bottom: 10px;
-    margin-top: 50px;
-    max-width: 96%; }
+    max-width: 200px; }
   #about h1 {
     margin-top: 30px;
     font-size: 2.7em;
     color: #021F2D; }
-    @media only screen and (max-width: 330px) {
+    @media only screen and (max-width: 991px) {
       #about h1 {
-        font-size: 2.4em; } }
+        font-size: 2em;
+        line-height: 45px; } }
   #about p {
     max-width: 750px;
-    font-size: 1.6em;
+    font-size: 1.4em;
     color: #636363;
-    margin: 10px auto 0 auto; }
+    margin: 20px auto 0 auto; }
 
 /* Sell Your House */
 #sell-your-house {
@@ -600,7 +597,7 @@ header {
       .slide-effect .cta-button {
         transform: translate(0, 0); } }
     .slide-effect .cta-button button {
-      font-size: 20px;
+      font-size: 18px;
       padding: 0 20px;
       height: 40px;
       margin: 10px auto;
@@ -644,13 +641,12 @@ header {
 /* Form */
 #contact {
   background-color: #0470BA;
-  padding-top: 30px;
-  padding-bottom: 40px; }
+  padding: 20px 0; }
   #contact h1 {
     color: #fff;
-    font-size: 3em;
-    line-height: 60px;
-    padding: 20px 10px; }
+    font-size: 30px;
+    line-height: 50px;
+    padding: 10px; }
   #contact p {
     font-size: 1.5em;
     margin: 10px auto 20px auto;
