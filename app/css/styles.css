@@ -16,7 +16,7 @@ body {
   body .row {
     margin: 0; }
 
-.col-md-4, .col-lg-4 {
+.col-md-4, .col-lg-4, .col-xs-2, .col-sm-2, .col-xs-8, .col-sm-8 {
   padding: 0; }
 
 .valign-wrapper {
@@ -127,39 +127,23 @@ nav {
   z-index: 999 !important;
   /* Navbar Desktop*/
   /* Navbar Mobile*/ }
-  @media only screen and (max-width: 400px) {
-    nav {
-      height: 80px; } }
-  @media only screen and (max-width: 350px) {
-    nav {
-      height: 70px; } }
   nav .navbar-fixed-top {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
     width: 100%; }
-  nav img {
-    margin: 5px auto;
-    height: 60px;
-    padding-left: 10px; }
-    @media only screen and (max-width: 995px) {
-      nav img {
-        margin: 15px 0 15px 20px;
-        padding-left: 100px; } }
-    @media only screen and (max-width: 550px) {
-      nav img {
-        margin: 15px 0 15px 20px;
-        padding-left: 25px; } }
-    @media only screen and (max-width: 400px) {
-      nav img {
-        height: 75px;
-        margin: 8px 30px;
-        padding-left: 20px; } }
-    @media only screen and (max-width: 350px) {
-      nav img {
-        height: 70px;
-        margin: 5px 30px; } }
+  nav .logo {
+    margin: 8px auto 8px 10px;
+    max-width: 220px; }
+    @media only screen and (max-width: 380px) {
+      nav .logo {
+        margin: 9px auto 9px 10px;
+        max-width: 200px; } }
+    @media only screen and (max-width: 360px) {
+      nav .logo {
+        margin: 11px auto 11px 10px;
+        max-width: 190px; } }
   nav #nav-desktop {
     background: #fff; }
     @media only screen and (max-width: 995px) {
@@ -171,7 +155,7 @@ nav {
       float: left; }
       @media only screen and (max-width: 1350px) {
         nav #nav-desktop .nav-list {
-          padding-left: 40px; } }
+          padding-left: 80px; } }
       nav #nav-desktop .nav-list ul {
         margin: 0;
         padding: 0; }
@@ -213,34 +197,22 @@ nav {
   @media only screen and (min-width: 996px) {
     nav #nav-mobile {
       display: none; } }
-  nav #nav-mobile .call-icon {
-    font-size: 38px !important;
-    padding: 31px 0;
-    color: #fff;
+  nav #nav-mobile .nav-buttons {
     float: right;
-    margin-right: 10%; }
-    @media only screen and (max-width: 340px) {
-      nav #nav-mobile .call-icon {
-        margin-right: 0; } }
-  nav #nav-mobile .menu-icon {
-    font-size: 42px !important;
-    padding: 29px 0;
-    color: #fff;
-    float: left;
-    margin-left: 10%; }
-    @media only screen and (max-width: 340px) {
-      nav #nav-mobile .menu-icon {
-        margin-left: 0; } }
-  @media only screen and (max-width: 400px) {
-    nav #nav-mobile .menu-icon {
-      padding: 19px 0; }
-    nav #nav-mobile .call-icon {
-      padding: 19px 0; } }
-  @media only screen and (max-width: 350px) {
-    nav #nav-mobile .menu-icon {
-      padding: 14px 0; }
-    nav #nav-mobile .call-icon {
-      padding: 16px 0; } }
+    padding-top: 11px; }
+    nav #nav-mobile .nav-buttons .call-icon {
+      font-size: 38px !important;
+      color: #0470BA;
+      display: inline-block;
+      margin: 0 5px; }
+      @media only screen and (max-width: 340px) {
+        nav #nav-mobile .nav-buttons .call-icon {
+          margin-right: 0; } }
+    nav #nav-mobile .nav-buttons .menu-icon {
+      font-size: 42px !important;
+      color: #0470BA;
+      margin: 0 5px;
+      display: inline-block; }
 
 #menu-logo {
   padding: 0 !important;
@@ -304,7 +276,7 @@ nav {
   background: none;
   padding: 0; }
   #call-btn-mobile button {
-    background-color: #024AA0;
+    background-color: #0470BA;
     border: none;
     padding: 10px;
     width: 100%;
@@ -348,9 +320,7 @@ header {
   background-size: cover;
   color: #fff;
   z-index: 1 !important;
-  margin-top: 70px !important;
-  padding-left: 5px;
-  padding-right: 5px; }
+  margin-top: 70px !important; }
   @media only screen and (max-width: 992px) {
     header {
       background: url("");
@@ -360,13 +330,7 @@ header {
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
-      background-color: #f5f5f5; } }
-  @media only screen and (max-width: 400px) {
-    header {
-      margin-top: 80px !important; } }
-  @media only screen and (max-width: 350px) {
-    header {
-      margin-top: 70px !important; } }
+      background-color: #34a7d7; } }
   header img {
     max-width: 100%; }
     @media only screen and (min-width: 993px) {
@@ -392,14 +356,14 @@ header {
     padding: 50px 0 !important; }
     @media only screen and (max-width: 420px) {
       header .header-content {
-        padding: 20px 0 !important; } }
+        padding: 10px 0 !important; } }
     @media only screen and (max-width: 360px) {
       header .header-content {
-        padding: 10px 0 !important; } }
+        padding: 5px !important; } }
     header .header-content h1 {
       color: #fff;
       text-align: left;
-      font-family: 'Martel', serif;
+      font-family: 'Raleway', serif;
       font-weight: 400;
       font-size: 1.5em;
       padding: 15px 50px;
@@ -408,7 +372,7 @@ header {
         header .header-content h1 {
           text-align: center;
           font-size: 1.5em;
-          color: #021F2D; } }
+          padding: 15px 0; } }
     header .header-content h2 {
       color: #fff;
       font-family: 'Martel', serif;
@@ -420,11 +384,10 @@ header {
       line-height: 75px; }
       @media only screen and (max-width: 992px) {
         header .header-content h2 {
-          color: #021F2D;
           text-align: center;
-          font-size: 3em !important;
+          font-size: 2.2em !important;
           line-height: 45px !important;
-          padding: 15px; } }
+          padding: 15px 0; } }
     header .header-content p {
       color: #fff;
       font-family: 'Raleway', sans-serif;
@@ -438,8 +401,9 @@ header {
       @media only screen and (max-width: 992px) {
         header .header-content p {
           text-align: center;
+          font-size: 1.4em;
           max-width: 100%;
-          color: #021F2D; } }
+          padding: 15px 0; } }
       @media only screen and (max-width: 330px) {
         header .header-content p {
           padding: 10px;
@@ -451,36 +415,35 @@ header {
         font-size: 25px;
         padding: 0 30px;
         height: 60px;
-        margin: 15px 0 30px 50px; }
+        margin: 15px 0 30px 0; }
         @media only screen and (max-width: 992px) {
           header .header-content a button {
-            margin: 0 auto; } }
+            margin: 0 auto;
+            height: 50px;
+            font-size: 22px; } }
+        @media only screen and (max-width: 360px) {
+          header .header-content a button {
+            font-size: 20px; } }
 
 /* About */
 #about {
   background-color: #fff;
-  padding: 80px; }
-  @media only screen and (max-width: 991px) {
-    #about {
-      padding: 25px 25px 80px; } }
+  padding: 20px 10px; }
   #about img {
-    max-width: 300px;
-    padding: 30px;
-    padding-bottom: 10px;
-    margin-top: 50px;
-    max-width: 96%; }
-  #about h1 {
-    margin-top: 30px;
-    font-size: 2.7em;
-    color: #021F2D; }
+    margin: 20px auto;
+    max-width: 200px; }
+  #about h2 {
+    margin: 20px auto;
+    font-size: 2.4em;
+    color: #0470BA; }
     @media only screen and (max-width: 330px) {
-      #about h1 {
+      #about h2 {
         font-size: 2.4em; } }
   #about p {
     max-width: 750px;
-    font-size: 1.6em;
+    font-size: 1.4em;
     color: #636363;
-    margin: 10px auto 0 auto; }
+    margin: 20px auto; }
 
 /* Sell Your House */
 #sell-your-house {
@@ -488,11 +451,11 @@ header {
   padding: 30px 0; }
   #sell-your-house h2 {
     text-align: center;
-    color: #024AA0;
+    color: #0470BA;
     font-size: 2.4em; }
   #sell-your-house h3 {
     text-align: center;
-    color: #024AA0;
+    color: #0470BA;
     font-size: 1.8em;
     padding: 12px 0;
     margin: 0; }
@@ -507,6 +470,7 @@ header {
       #sell-your-house .step-cards {
         max-width: 960px; } }
     #sell-your-house .step-cards .step-card {
+      border-top: 5px solid #0470BA;
       background: #fff;
       margin: 20px 10px;
       max-width: 350px;
@@ -534,21 +498,21 @@ header {
       #sell-your-house .step-cards .step-card span {
         font-family: 'Martel', serif;
         font-size: 30px;
-        color: #024AA0;
+        color: #0470BA;
         padding: 0; }
 
 /* Advantages */
 #advantages {
-  padding: 30px 15px; }
+  padding: 30px 10px; }
   #advantages h2 {
-    color: #024AA0;
+    color: #0470BA;
     text-align: center;
     margin: 15px auto; }
   #advantages .advantages-card {
     display: block;
     background: #fff;
     margin: 30px auto 0 auto;
-    width: 90%;
+    width: 96%;
     position: relative;
     z-index: 10;
     max-width: 700px; }
@@ -558,7 +522,7 @@ header {
     #advantages .advantages-card h3 {
       font-family: 'Martel', serif;
       font-weight: 400;
-      color: #024AA0;
+      color: #0470BA;
       padding: 10px 0 5px 0; }
     #advantages .advantages-card p {
       font-size: 18px;
@@ -590,7 +554,7 @@ header {
     display: block;
     margin: 0 auto;
     padding: 5px 0;
-    width: 90%;
+    width: 96%;
     max-width: 698px;
     transition: all 0.2s;
     -webkit-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
@@ -738,7 +702,7 @@ header {
     font-family: 'Quicksand';
     font-weight: 400; }
   #contact .input-field .prefix.active {
-    color: #024AA0; }
+    color: #0470BA; }
   #contact .material-icons {
     color: #0470BA;
     padding: 5px;
