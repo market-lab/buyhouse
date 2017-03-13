@@ -528,11 +528,15 @@ header {
       font-size: 18px;
       padding-bottom: 20px;
       max-width: 500px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      color: #636363; }
     #advantages .advantages-card img {
       max-width: 180px;
       display: block;
       margin: 20px auto 0 auto; }
+      @media only screen and (max-width: 992px) {
+        #advantages .advantages-card img {
+          max-width: 150px; } }
     #advantages .advantages-card .sold-img {
       margin: 10px auto; }
 
@@ -546,9 +550,12 @@ header {
     -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5); }
   .slide-effect .cta-button {
-    border: 1px solid #d1d1d1;
+    -webkit-transform: translate(0, -71px);
+    -moz-transform: translate(0, -71px);
+    -o-transform: translate(0, -71px);
+    -ms-transform: translate(0, -71px);
     transform: translate(0, -71px);
-    background: #fff;
+    background: #f2f2f2;
     position: relative;
     z-index: -1;
     display: block;
@@ -557,11 +564,15 @@ header {
     width: 96%;
     max-width: 698px;
     transition: all 0.2s;
-    -webkit-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4); }
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5); }
     @media only screen and (max-width: 992px) {
       .slide-effect .cta-button {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
         transform: translate(0, 0); } }
     .slide-effect .cta-button button {
       font-size: 20px;
@@ -569,10 +580,6 @@ header {
       height: 40px;
       margin: 10px auto;
       display: block; }
-  .slide-effect:hover .advantages-card {
-    -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4); }
   .slide-effect:hover .cta-button {
     transform: translate(0, 0);
     transition: all 0.2s;

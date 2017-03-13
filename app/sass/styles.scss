@@ -540,11 +540,13 @@ header{
             padding-bottom: 20px;
             max-width: 500px;
             margin: 0 auto;
+            color: $dark-grey;
         }
         img {
             max-width: 180px;
             display: block;
-            margin: 20px auto 0 auto; }
+            margin: 20px auto 0 auto;
+            @media only screen and (max-width: 992px) { max-width: 150px; } }
         .sold-img { margin: 10px auto; }
 
     }
@@ -556,9 +558,8 @@ header{
     display: block;
     .advantages-card{ @include box-shadow (0, 0, 3px, 0, rgba(0, 0, 0, 0.5)); }
     .cta-button {
-        border: 1px solid #d1d1d1;
-        transform:translate(0, -71px);
-        background: #fff;
+        @include translate(0, -71px);
+        background: #f2f2f2;
         position: relative;
         z-index: -1;
         display: block;
@@ -567,8 +568,10 @@ header{
         width: 96%;
         max-width: 698px;
         transition: all 0.2s;
-        @include box-shadow (0, 0, 1px, 0, rgba(0, 0, 0, 0.4));
-        @media only screen and (max-width: 992px) {transform:translate(0, 0);}
+        -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.5);
+        box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.5);
+        @media only screen and (max-width: 992px) {@include translate (0, 0);}
         button {
             font-size: 20px;
             padding: 0 20px;
@@ -577,7 +580,6 @@ header{
             display: block; }
     }
     &:hover {
-        .advantages-card{ @include box-shadow (0, 0, 8px, 0, rgba(0, 0, 0, 0.4)); }
         .cta-button {
             transform:translate(0, 0);
             transition: all 0.2s;
