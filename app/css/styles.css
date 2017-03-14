@@ -402,18 +402,14 @@ header {
   header .mask {
     background-color: rgba(52, 167, 215, 0.95);
     position: absolute;
-    height: 477px;
+    height: 530px;
     width: 100%;
     margin: 0 -5px;
     -webkit-clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%);
     clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%); }
-    @media only screen and (max-width: 1385px) {
+    @media only screen and (max-width: 996px) {
       header .mask {
-        -webkit-clip-path: polygon(0 0, 520px 0, 580px 100%, 0% 100%);
-        clip-path: polygon(0 0, 500px 0, 560px 100%, 0% 100%); } }
-    @media only screen and (max-width: 997px) {
-      header .mask {
-        height: 517px; } }
+        height: 570px; } }
     @media only screen and (max-width: 992px) {
       header .mask {
         display: none; } }
@@ -432,50 +428,30 @@ header {
         padding: 10px !important; } }
     @media only screen and (max-width: 360px) {
       header .header-content {
-<<<<<<< HEAD
         padding: 10px !important; } }
     header .header-content h2 {
-=======
-        padding: 10px 0 !important; } }
-    header .header-content h1 {
->>>>>>> master
       color: #fff;
       font-family: 'Martel', serif;
       font-weight: bolder;
       text-align: left;
-      font-size: 3em;
+      font-size: 3.5em;
       margin: 0;
       padding: 15px 50px;
-<<<<<<< HEAD
       line-height: 75px;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
       @media only screen and (max-width: 992px) {
         header .header-content h2 {
           text-align: center;
-          font-size: 2em !important;
+          font-size: 2.5em !important;
           line-height: 45px !important;
           padding: 15px 0 0 0; } }
+      @media only screen and (max-width: 420px) {
+        header .header-content h2 {
+          font-size: 2em !important; } }
       @media only screen and (max-width: 330px) {
         header .header-content h2 {
           font-size: 1.8em !important; } }
     header .header-content p {
-=======
-      line-height: 75px; }
-      @media only screen and (max-width: 1385px) {
-        header .header-content h1 {
-          font-size: 2.6em;
-          line-height: 50px;
-          margin: 25px 0; } }
-      @media only screen and (max-width: 992px) {
-        header .header-content h1 {
-          color: #021F2D;
-          text-align: center;
-          font-size: 2em !important;
-          line-height: 45px !important;
-          padding: 15px;
-          margin: 0; } }
-    header .header-content h2 {
->>>>>>> master
       color: #fff;
       font-family: 'Raleway', sans-serif;
       text-align: left;
@@ -487,22 +463,13 @@ header {
       line-height: 1.4em;
       padding: 15px 50px; }
       @media only screen and (max-width: 992px) {
-        header .header-content h2 {
+        header .header-content p {
           text-align: center;
-<<<<<<< HEAD
           font-size: 1.4em;
           max-width: 100%;
           padding: 15px 20px; } }
       @media only screen and (max-width: 330px) {
         header .header-content p {
-=======
-          color: #021F2D;
-          font-size: 1.4em;
-          padding: 0 20px;
-          margin: 0 auto; } }
-      @media only screen and (max-width: 330px) {
-        header .header-content h2 {
->>>>>>> master
           padding: 10px; } }
     header .header-content a {
       padding: 0 50px;
@@ -515,21 +482,15 @@ header {
         @media only screen and (max-width: 992px) {
           header .header-content a button {
             margin: 0 auto;
-<<<<<<< HEAD
             height: 50px;
             font-size: 22px; } }
         @media only screen and (max-width: 360px) {
           header .header-content a button {
             font-size: 20px; } }
-=======
-            padding: 0 20px;
-            font-size: 1.5em; } }
->>>>>>> master
 
 /* About */
 #about {
   background-color: #fff;
-<<<<<<< HEAD
   padding: 20px 10px; }
   #about img {
     margin: 20px auto;
@@ -541,31 +502,11 @@ header {
     @media only screen and (max-width: 330px) {
       #about h2 {
         font-size: 2.4em; } }
-=======
-  padding: 80px; }
-  @media only screen and (max-width: 991px) {
-    #about {
-      padding: 40px 10px; } }
-  #about img {
-    max-width: 200px; }
-  #about h1 {
-    margin-top: 30px;
-    font-size: 2.7em;
-    color: #021F2D; }
-    @media only screen and (max-width: 991px) {
-      #about h1 {
-        font-size: 2em;
-        line-height: 45px; } }
->>>>>>> master
   #about p {
     max-width: 750px;
     font-size: 1.4em;
     color: #636363;
-<<<<<<< HEAD
     margin: 20px auto; }
-=======
-    margin: 20px auto 0 auto; }
->>>>>>> master
 
 /* Sell Your House */
 #sell-your-house {
@@ -876,7 +817,7 @@ header {
         transform: translate(0, 0);
         z-index: 1; } }
     .slide-effect .cta-button button {
-      font-size: 18px;
+      font-size: 20px;
       padding: 0 20px;
       height: 40px;
       margin: 10px auto;
@@ -902,9 +843,9 @@ header {
     padding: 0 0 0 0; }
   @media screen and (max-width: 995px) {
     .call-button-desktop {
-      -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
-      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3); } }
+      -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.6); } }
   .call-button-desktop h4 {
     padding: 10.5px 10px 10.5px 0 !important;
     border: none;
@@ -961,21 +902,16 @@ header {
 
 #contact {
   background-color: #0470BA;
-  padding: 20px 0; }
+  padding-top: 30px;
+  padding-bottom: 40px; }
   #contact h1 {
     color: #fff;
-<<<<<<< HEAD
     font-size: 2.5em;
     line-height: 50px;
     padding: 10px;
     letter-spacing: 1.5px;
     font-family: 'Raleway', sans-serif;
     font-weight: 600; }
-=======
-    font-size: 30px;
-    line-height: 50px;
-    padding: 10px; }
->>>>>>> master
   #contact p {
     font-size: 1.5em;
     margin: 10px auto 20px auto;
@@ -1005,6 +941,12 @@ header {
       -ms-transition: all, 0.3s;
       -o-transition: all, 0.3s;
       transition: all, 0.3s; }
+      #contact form button i {
+        -webkit-transform: translateY(4px);
+        -moz-transform: translateY(4px);
+        -o-transform: translateY(4px);
+        -ms-transform: translateY(4px);
+        transform: translateY(4px); }
       #contact form button:hover {
         -webkit-transition: all, 0.3s;
         -moz-transition: all, 0.3s;
@@ -1013,6 +955,8 @@ header {
         transition: all, 0.3s;
         background-color: #0470BA;
         color: #fff; }
+        #contact form button:hover i {
+          color: #fff; }
   #contact .form-inputs {
     width: 500px;
     max-width: 100%;
