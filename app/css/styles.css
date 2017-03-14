@@ -8,15 +8,16 @@ body {
   transition: background-color .5s; }
   body h1, body h2 {
     font-family: 'Martel', sans-serif;
-    font-weight: 400;
     margin: 0;
     padding: 0; }
   body p, body button {
     font-family: 'Raleway', sans-serif; }
   body .row {
     margin: 0; }
+  body a {
+    text-decoration: none !important; }
 
-.col-md-4, .col-lg-4 {
+.col-md-4, .col-lg-4, .col-xs-2, .col-sm-2, .col-xs-8, .col-sm-8 {
   padding: 0; }
 
 .valign-wrapper {
@@ -127,39 +128,23 @@ nav {
   z-index: 999 !important;
   /* Navbar Desktop*/
   /* Navbar Mobile*/ }
-  @media only screen and (max-width: 400px) {
-    nav {
-      height: 80px; } }
-  @media only screen and (max-width: 350px) {
-    nav {
-      height: 70px; } }
   nav .navbar-fixed-top {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
     width: 100%; }
-  nav img {
-    margin: 5px auto;
-    height: 60px;
-    padding-left: 10px; }
-    @media only screen and (max-width: 995px) {
-      nav img {
-        margin: 15px 0 15px 20px;
-        padding-left: 100px; } }
-    @media only screen and (max-width: 550px) {
-      nav img {
-        margin: 15px 0 15px 20px;
-        padding-left: 25px; } }
-    @media only screen and (max-width: 400px) {
-      nav img {
-        height: 75px;
-        margin: 8px 30px;
-        padding-left: 20px; } }
-    @media only screen and (max-width: 350px) {
-      nav img {
-        height: 70px;
-        margin: 5px 30px; } }
+  nav .logo {
+    margin: 8px auto 8px 10px;
+    max-width: 220px; }
+    @media only screen and (max-width: 380px) {
+      nav .logo {
+        margin: 9px auto 9px 10px;
+        max-width: 200px; } }
+    @media only screen and (max-width: 360px) {
+      nav .logo {
+        margin: 11px auto 11px 10px;
+        max-width: 190px; } }
   nav #nav-desktop {
     background: #fff; }
     @media only screen and (max-width: 995px) {
@@ -171,7 +156,7 @@ nav {
       float: left; }
       @media only screen and (max-width: 1350px) {
         nav #nav-desktop .nav-list {
-          padding-left: 40px; } }
+          padding-left: 80px; } }
       nav #nav-desktop .nav-list ul {
         margin: 0;
         padding: 0; }
@@ -181,16 +166,19 @@ nav {
         nav #nav-desktop .nav-list li .nav-list-item {
           color: #7c7c7c;
           font-size: 18px;
-          padding: 0 5px;
+          padding: 5px 10px;
           cursor: pointer;
-          border-radius: 4px;
+          border-bottom: 2px solid #fff;
+          border-left: 2px solid #fff;
           -webkit-transition: all 0.3s;
           -moz-transition: all 0.3s;
           -ms-transition: all 0.3s;
           -o-transition: all 0.3s;
           transition: all 0.3s; }
           nav #nav-desktop .nav-list li .nav-list-item:hover {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.05);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+            border-left: 2px solid rgba(0, 0, 0, 0.2);
             -webkit-transition: all 0.3s;
             -moz-transition: all 0.3s;
             -ms-transition: all 0.3s;
@@ -213,34 +201,22 @@ nav {
   @media only screen and (min-width: 996px) {
     nav #nav-mobile {
       display: none; } }
-  nav #nav-mobile .call-icon {
-    font-size: 38px !important;
-    padding: 31px 0;
-    color: #fff;
+  nav #nav-mobile .nav-buttons {
     float: right;
-    margin-right: 10%; }
-    @media only screen and (max-width: 340px) {
-      nav #nav-mobile .call-icon {
-        margin-right: 0; } }
-  nav #nav-mobile .menu-icon {
-    font-size: 42px !important;
-    padding: 29px 0;
-    color: #fff;
-    float: left;
-    margin-left: 10%; }
-    @media only screen and (max-width: 340px) {
-      nav #nav-mobile .menu-icon {
-        margin-left: 0; } }
-  @media only screen and (max-width: 400px) {
-    nav #nav-mobile .menu-icon {
-      padding: 19px 0; }
-    nav #nav-mobile .call-icon {
-      padding: 19px 0; } }
-  @media only screen and (max-width: 350px) {
-    nav #nav-mobile .menu-icon {
-      padding: 14px 0; }
-    nav #nav-mobile .call-icon {
-      padding: 16px 0; } }
+    padding-top: 11px; }
+    nav #nav-mobile .nav-buttons .call-icon {
+      font-size: 38px !important;
+      color: #0470BA;
+      display: inline-block;
+      margin: 0 5px; }
+      @media only screen and (max-width: 340px) {
+        nav #nav-mobile .nav-buttons .call-icon {
+          margin-right: 0; } }
+    nav #nav-mobile .nav-buttons .menu-icon {
+      font-size: 42px !important;
+      color: #0470BA;
+      margin: 0 5px;
+      display: inline-block; }
 
 #menu-logo {
   padding: 0 !important;
@@ -251,7 +227,7 @@ nav {
   #menu-logo img {
     padding: 0 !important;
     margin: 0 !important;
-    height: 80px; }
+    width: 220px; }
 
 #menu-effect {
   display: none; }
@@ -268,13 +244,7 @@ nav {
   /* Stay on top */
   top: 0;
   left: 0;
-  background: url("https://s3.amazonaws.com/market-lab-2.0/menu-background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: #fff;
   overflow-x: hidden;
   /* Disable horizontal scroll */
   padding-top: 20px;
@@ -289,29 +259,77 @@ nav {
 .sidenav a {
   padding: 8px 12px;
   margin: 10px 10px;
-  font-family: 'Quicksand';
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.3);
+  color: #0470BA;
+  border: 1px solid #0470BA;
   display: block;
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.6); }
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #fff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #fff 0%, #f0f0f0 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #f0f0f0));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #fff 0%, #f0f0f0 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #fff 0%, #f0f0f0 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #fff 0%, #f0f0f0 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #fff 0%, #f0f0f0 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */ }
+
+.no-border {
+  border: none !important; }
 
 #call-btn-mobile {
   background: none;
-  padding: 0; }
-  #call-btn-mobile button {
-    background-color: #024AA0;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    color: #0E3744;
-    -webkit-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.6);
-    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.6); }
+  padding: 0;
+  background: #0470BA;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: 24px;
+  padding: 0;
+  border: 2px solid #00875c;
+  background: #00d172;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #00d172 0%, #00A672 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00d172), color-stop(100%, #00A672));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #00d172 0%, #00A672 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #00d172 0%, #00A672 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #00d172 0%, #00A672 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #00d172 0%, #00A672 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */ }
+  #call-btn-mobile i {
+    font-size: 30px;
+    margin: 12px 10px 12px 0;
+    display: inline-block; }
+  #call-btn-mobile p {
+    display: inline-block;
+    margin-bottom: 0;
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -o-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px); }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus {
@@ -320,7 +338,7 @@ nav {
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   font-size: 36px;
-  color: #fff;
+  color: #0470BA;
   position: absolute;
   top: 0;
   right: 25px;
@@ -348,9 +366,7 @@ header {
   background-size: cover;
   color: #fff;
   z-index: 1 !important;
-  margin-top: 70px !important;
-  padding-left: 5px;
-  padding-right: 5px; }
+  margin-top: 70px !important; }
   @media only screen and (max-width: 992px) {
     header {
       background: url("");
@@ -360,13 +376,24 @@ header {
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
-      background-color: #f5f5f5; } }
-  @media only screen and (max-width: 400px) {
-    header {
-      margin-top: 80px !important; } }
-  @media only screen and (max-width: 350px) {
-    header {
-      margin-top: 70px !important; } }
+      background-color: #34a7d7; } }
+  header h1 {
+    color: #fff;
+    text-align: left;
+    font-family: 'Raleway', serif;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    font-size: 1.5em;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    padding: 15px 50px;
+    margin: 0; }
+    @media only screen and (max-width: 992px) {
+      header h1 {
+        text-align: center;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+        background: #00A672;
+        font-size: 1.5em;
+        padding: 10px 10px; } }
   header img {
     max-width: 100%; }
     @media only screen and (min-width: 993px) {
@@ -375,72 +402,74 @@ header {
   header .mask {
     background-color: rgba(52, 167, 215, 0.95);
     position: absolute;
-    height: 477px;
+    height: 530px;
     width: 100%;
     margin: 0 -5px;
     -webkit-clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%);
     clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%); }
-    @media only screen and (max-width: 1385px) {
+    @media only screen and (max-width: 996px) {
       header .mask {
-        -webkit-clip-path: polygon(0 0, 520px 0, 580px 100%, 0% 100%);
-        clip-path: polygon(0 0, 500px 0, 560px 100%, 0% 100%); } }
-    @media only screen and (max-width: 997px) {
-      header .mask {
-        height: 517px; } }
+        height: 570px; } }
     @media only screen and (max-width: 992px) {
       header .mask {
         display: none; } }
+  @media only screen and (max-width: 992px) {
+    header .h1-desktop {
+      display: none; } }
+  @media only screen and (min-width: 992px) {
+    header .h1-mobile {
+      display: none; } }
   header .header-content {
     position: relative;
     height: 100%;
     padding: 50px 0 !important; }
     @media only screen and (max-width: 420px) {
       header .header-content {
-        padding: 20px 0 !important; } }
+        padding: 10px !important; } }
     @media only screen and (max-width: 360px) {
       header .header-content {
-        padding: 10px 0 !important; } }
-    header .header-content h1 {
+        padding: 10px !important; } }
+    header .header-content h2 {
       color: #fff;
       font-family: 'Martel', serif;
       font-weight: bolder;
       text-align: left;
-      font-size: 3em;
+      font-size: 3.5em;
       margin: 0;
       padding: 15px 50px;
-      line-height: 75px; }
-      @media only screen and (max-width: 1385px) {
-        header .header-content h1 {
-          font-size: 2.6em;
-          line-height: 50px;
-          margin: 25px 0; } }
+      line-height: 75px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
       @media only screen and (max-width: 992px) {
-        header .header-content h1 {
-          color: #021F2D;
+        header .header-content h2 {
           text-align: center;
-          font-size: 2em !important;
+          font-size: 2.5em !important;
           line-height: 45px !important;
-          padding: 15px;
-          margin: 0; } }
-    header .header-content h2 {
+          padding: 15px 0 0 0; } }
+      @media only screen and (max-width: 420px) {
+        header .header-content h2 {
+          font-size: 2em !important; } }
+      @media only screen and (max-width: 330px) {
+        header .header-content h2 {
+          font-size: 1.8em !important; } }
+    header .header-content p {
       color: #fff;
       font-family: 'Raleway', sans-serif;
       text-align: left;
       font-size: 1.6em;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
       max-width: 600px;
       margin: 0;
       display: block;
       line-height: 1.4em;
       padding: 15px 50px; }
       @media only screen and (max-width: 992px) {
-        header .header-content h2 {
+        header .header-content p {
           text-align: center;
-          color: #021F2D;
           font-size: 1.4em;
-          padding: 0 20px;
-          margin: 0 auto; } }
+          max-width: 100%;
+          padding: 15px 20px; } }
       @media only screen and (max-width: 330px) {
-        header .header-content h2 {
+        header .header-content p {
           padding: 10px; } }
     header .header-content a {
       padding: 0 50px;
@@ -449,35 +478,35 @@ header {
         font-size: 25px;
         padding: 0 30px;
         height: 60px;
-        margin: 15px 0 30px 50px; }
+        margin: 15px 0 30px 0; }
         @media only screen and (max-width: 992px) {
           header .header-content a button {
             margin: 0 auto;
-            padding: 0 20px;
-            font-size: 1.5em; } }
+            height: 50px;
+            font-size: 22px; } }
+        @media only screen and (max-width: 360px) {
+          header .header-content a button {
+            font-size: 20px; } }
 
 /* About */
 #about {
   background-color: #fff;
-  padding: 80px; }
-  @media only screen and (max-width: 991px) {
-    #about {
-      padding: 40px 10px; } }
+  padding: 20px 10px; }
   #about img {
+    margin: 20px auto;
     max-width: 200px; }
-  #about h1 {
-    margin-top: 30px;
-    font-size: 2.7em;
-    color: #021F2D; }
-    @media only screen and (max-width: 991px) {
-      #about h1 {
-        font-size: 2em;
-        line-height: 45px; } }
+  #about h2 {
+    margin: 20px auto;
+    font-size: 2.4em;
+    color: #0470BA; }
+    @media only screen and (max-width: 330px) {
+      #about h2 {
+        font-size: 2.4em; } }
   #about p {
     max-width: 750px;
     font-size: 1.4em;
     color: #636363;
-    margin: 20px auto 0 auto; }
+    margin: 20px auto; }
 
 /* Sell Your House */
 #sell-your-house {
@@ -485,26 +514,22 @@ header {
   padding: 30px 0; }
   #sell-your-house h2 {
     text-align: center;
-    color: #024AA0;
+    color: #0470BA;
     font-size: 2.4em; }
-  #sell-your-house h3 {
-    text-align: center;
-    color: #024AA0;
-    font-size: 1.8em;
-    padding: 12px 0;
-    margin: 0; }
   #sell-your-house .step-cards {
     display: block;
     margin: 0 auto;
     max-width: 1110px; }
     @media only screen and (max-width: 1250px) {
       #sell-your-house .step-cards {
-        max-width: 1020px; } }
-    @media only screen and (max-width: 1150px) {
+        max-width: 1050px; } }
+    @media only screen and (max-width: 1170px) {
       #sell-your-house .step-cards {
         max-width: 960px; } }
     #sell-your-house .step-cards .step-card {
+      border-top: 5px solid #0470BA;
       background: #fff;
+      min-height: 285.8px;
       margin: 20px 10px;
       max-width: 350px;
       -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
@@ -512,40 +537,227 @@ header {
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3); }
       @media only screen and (max-width: 1250px) {
         #sell-your-house .step-cards .step-card {
-          max-width: 320px; } }
-      @media only screen and (max-width: 1150px) {
+          max-width: 330px; } }
+      @media only screen and (max-width: 1170px) {
         #sell-your-house .step-cards .step-card {
           max-width: 300px; } }
-      @media only screen and (max-width: 400px) {
+      @media only screen and (max-width: 992px) {
+        #sell-your-house .step-cards .step-card {
+          max-width: 350px; } }
+      @media only screen and (max-width: 450px) {
         #sell-your-house .step-cards .step-card {
           max-width: 94%; } }
       @media only screen and (max-width: 990px) {
         #sell-your-house .step-cards .step-card {
           margin: 20px auto; } }
-      #sell-your-house .step-cards .step-card h3 {
+      #sell-your-house .step-cards .step-card .step-card-header h3 {
         font-family: 'Raleway', sans-serif;
-        font-size: 23px; }
-      #sell-your-house .step-cards .step-card img {
+        text-align: center;
+        display: inline-block;
+        color: #0470BA;
+        font-size: 1.8em;
+        padding: 12px 0;
+        margin: 0 0 0 30px; }
+      #sell-your-house .step-cards .step-card .step-card-header i {
+        font-size: 40px;
+        padding: 22px 5px;
+        margin-right: 20px;
+        color: #00d172;
+        float: right;
+        -webkit-transition: color 0.4s;
+        -moz-transition: color 0.4s;
+        -ms-transition: color 0.4s;
+        -o-transition: color 0.4s;
+        transition: color 0.4s; }
+      #sell-your-house .step-cards .step-card .step-card-header .off {
+        display: inline-block; }
+      #sell-your-house .step-cards .step-card .step-card-header .active {
+        display: none; }
+      #sell-your-house .step-cards .step-card .step-img {
         width: 100%;
-        padding: 0; }
+        padding: 0;
+        height: 200px;
+        opacity: 1;
+        -webkit-transition: height 0.4s, opacity 0.3s;
+        -moz-transition: height 0.4s, opacity 0.3s;
+        -ms-transition: height 0.4s, opacity 0.3s;
+        -o-transition: height 0.4s, opacity 0.3s;
+        transition: height 0.4s, opacity 0.3s; }
+      #sell-your-house .step-cards .step-card .step-img-1 {
+        background: url("https://s3.us-east-2.amazonaws.com/cash-house-express/steps/sell-your-house-step-1.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
+      #sell-your-house .step-cards .step-card .step-img-2 {
+        background: url("https://s3.us-east-2.amazonaws.com/cash-house-express/steps/sell-your-house-step-2.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
+      #sell-your-house .step-cards .step-card .step-img-3 {
+        background: url("https://s3.us-east-2.amazonaws.com/cash-house-express/steps/sell-your-house-step-3.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
       #sell-your-house .step-cards .step-card span {
         font-family: 'Martel', serif;
         font-size: 30px;
-        color: #024AA0;
+        color: #0470BA;
         padding: 0; }
+      #sell-your-house .step-cards .step-card .step-card-hover {
+        background: #0470BA;
+        height: 0;
+        opacity: 1; }
+        #sell-your-house .step-cards .step-card .step-card-hover button {
+          height: 0;
+          opacity: 0; }
+      #sell-your-house .step-cards .step-card .step-card-p {
+        font-size: 0;
+        opacity: 0;
+        -webkit-transition: opacity 0.3s ease-in, font-size 0.1s linear;
+        -moz-transition: opacity 0.3s ease-in, font-size 0.1s linear;
+        -ms-transition: opacity 0.3s ease-in, font-size 0.1s linear;
+        -o-transition: opacity 0.3s ease-in, font-size 0.1s linear;
+        transition: opacity 0.3s ease-in, font-size 0.1s linear; }
+      #sell-your-house .step-cards .step-card:hover i {
+        display: inline-block;
+        font-size: 40px;
+        padding: 22px 5px;
+        margin-right: 20px;
+        color: #0470BA;
+        -webkit-transition: color 0.4s;
+        -moz-transition: color 0.4s;
+        -ms-transition: color 0.4s;
+        -o-transition: color 0.4s;
+        transition: color 0.4s; }
+      #sell-your-house .step-cards .step-card:hover .off {
+        display: none; }
+      #sell-your-house .step-cards .step-card:hover .active {
+        display: inline-block; }
+      #sell-your-house .step-cards .step-card:hover .step-img {
+        height: 0;
+        opacity: 0;
+        -webkit-transition: height 0.2s, opacity 0.3s;
+        -moz-transition: height 0.2s, opacity 0.3s;
+        -ms-transition: height 0.2s, opacity 0.3s;
+        -o-transition: height 0.2s, opacity 0.3s;
+        transition: height 0.2s, opacity 0.3s; }
+      #sell-your-house .step-cards .step-card:hover .step-card-hover {
+        height: 200px;
+        position: relative;
+        -webkit-transition: height 0.2s linear, opacity 0.4s;
+        -moz-transition: height 0.2s linear, opacity 0.4s;
+        -ms-transition: height 0.2s linear, opacity 0.4s;
+        -o-transition: height 0.2s linear, opacity 0.4s;
+        transition: height 0.2s linear, opacity 0.4s; }
+        #sell-your-house .step-cards .step-card:hover .step-card-hover .step-card-p {
+          opacity: 1;
+          padding: 15px;
+          color: #fff;
+          font-size: 17px;
+          -webkit-transition: opacity 0.3s ease-in, font-size 0.1s linear;
+          -moz-transition: opacity 0.3s ease-in, font-size 0.1s linear;
+          -ms-transition: opacity 0.3s ease-in, font-size 0.1s linear;
+          -o-transition: opacity 0.3s ease-in, font-size 0.1s linear;
+          transition: opacity 0.3s ease-in, font-size 0.1s linear; }
+        #sell-your-house .step-cards .step-card:hover .step-card-hover .contact-buttons {
+          position: absolute;
+          left: 10%;
+          top: 50%;
+          -webkit-transform: translate(-10%, -50%);
+          -moz-transform: translate(-10%, -50%);
+          -o-transform: translate(-10%, -50%);
+          -ms-transform: translate(-10%, -50%);
+          transform: translate(-10%, -50%); }
+          @media only screen and (max-width: 350px) {
+            #sell-your-house .step-cards .step-card:hover .step-card-hover .contact-buttons {
+              left: 10%;
+              top: 50%;
+              -webkit-transform: translate(-10%, -50%);
+              -moz-transform: translate(-10%, -50%);
+              -o-transform: translate(-10%, -50%);
+              -ms-transform: translate(-10%, -50%);
+              transform: translate(-10%, -50%); } }
+          #sell-your-house .step-cards .step-card:hover .step-card-hover .contact-buttons button {
+            height: 40px;
+            background: #fff;
+            color: #0470BA;
+            font-size: 18px;
+            font-weight: 600;
+            background: #fff;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #fff 0%, #e1e1e1 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #e1e1e1));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #fff 0%, #e1e1e1 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #fff 0%, #e1e1e1 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #fff 0%, #e1e1e1 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, #fff 0%, #e1e1e1 100%);
+            /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+            /* IE6-9 */
+            border: 1px solid #d1d1d1;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            margin: 0 0 20px 20px;
+            padding: 5px 15px;
+            opacity: 1;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s; }
+            #sell-your-house .step-cards .step-card:hover .step-card-hover .contact-buttons button:hover {
+              background: #e1e1e1;
+              /* Old browsers */
+              background: -moz-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
+              /* FF3.6+ */
+              background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e1e1e1), color-stop(100%, #e1e1e1));
+              /* Chrome,Safari4+ */
+              background: -webkit-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
+              /* Chrome10+,Safari5.1+ */
+              background: -o-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
+              /* Opera 11.10+ */
+              background: -ms-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
+              /* IE10+ */
+              background: linear-gradient(to bottom, #e1e1e1 0%, #e1e1e1 100%);
+              /* W3C */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+              /* IE6-9 */
+              -webkit-transition: all 0.3s;
+              -moz-transition: all 0.3s;
+              -ms-transition: all 0.3s;
+              -o-transition: all 0.3s;
+              transition: all 0.3s;
+              -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+              -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+              box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5); }
 
 /* Advantages */
 #advantages {
-  padding: 30px 15px; }
+  padding: 30px 10px; }
   #advantages h2 {
-    color: #024AA0;
+    color: #0470BA;
     text-align: center;
     margin: 15px auto; }
   #advantages .advantages-card {
     display: block;
     background: #fff;
     margin: 30px auto 0 auto;
-    width: 90%;
+    width: 96%;
     position: relative;
     z-index: 10;
     max-width: 700px; }
@@ -555,17 +767,21 @@ header {
     #advantages .advantages-card h3 {
       font-family: 'Martel', serif;
       font-weight: 400;
-      color: #024AA0;
+      color: #0470BA;
       padding: 10px 0 5px 0; }
     #advantages .advantages-card p {
       font-size: 18px;
       padding-bottom: 20px;
       max-width: 500px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      color: #636363; }
     #advantages .advantages-card img {
       max-width: 180px;
       display: block;
       margin: 20px auto 0 auto; }
+      @media only screen and (max-width: 992px) {
+        #advantages .advantages-card img {
+          max-width: 150px; } }
     #advantages .advantages-card .sold-img {
       margin: 10px auto; }
 
@@ -579,74 +795,123 @@ header {
     -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5); }
   .slide-effect .cta-button {
-    border: 1px solid #d1d1d1;
-    transform: translate(0, -71px);
-    background: #fff;
+    background: #f2f2f2;
     position: relative;
+    transform: translate(0, -71px);
     z-index: -1;
     display: block;
     margin: 0 auto;
     padding: 5px 0;
-    width: 90%;
+    width: 96%;
     max-width: 698px;
     transition: all 0.2s;
-    -webkit-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4); }
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5); }
     @media only screen and (max-width: 992px) {
       .slide-effect .cta-button {
-        transform: translate(0, 0); } }
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        z-index: 1; } }
     .slide-effect .cta-button button {
-      font-size: 18px;
+      font-size: 20px;
       padding: 0 20px;
       height: 40px;
       margin: 10px auto;
       display: block; }
-  .slide-effect:hover .advantages-card {
-    -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4); }
   .slide-effect:hover .cta-button {
     transform: translate(0, 0);
     transition: all 0.2s;
     z-index: 2; }
 
-/* Slogan */
-#slogan {
-  background: url("https://s3.amazonaws.com/market-lab-2.0/slogan-parallax.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 500px;
-  width: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  #slogan h1 {
-    color: #fff;
-    font-size: 3.3em;
-    width: 100%;
-    line-height: 70px;
-    text-align: center;
-    text-shadow: -4px 3px 14px rgba(0, 0, 0, 0.9);
-    font-weight: 400; }
-    @media only screen and (max-width: 350px) {
-      #slogan h1 {
-        font-size: 3em; } }
-
 /* Form */
+.call-button-desktop {
+  max-width: 250px;
+  margin: 0 auto !important;
+  background: #00A672;
+  display: block;
+  border: 2px solid #1c776f;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+  .call-button-desktop .col-md-8 {
+    padding: 0; }
+  .call-button-desktop .col-md-4 {
+    padding: 0 0 0 0; }
+  @media screen and (max-width: 995px) {
+    .call-button-desktop {
+      -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.6); } }
+  .call-button-desktop h4 {
+    padding: 10.5px 10px 10.5px 0 !important;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+    font-size: 19px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #fff;
+    line-height: 25px;
+    margin: 0;
+    z-index: 0 !important;
+    position: relative;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0; }
+    .call-button-desktop h4 span {
+      font-family: sans-serif !important;
+      font-weight: 400; }
+  .call-button-desktop img {
+    height: 70px;
+    margin: 0;
+    z-index: 99 !important;
+    position: relative; }
+
+.trin-trin {
+  animation-name: trin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+@keyframes trin {
+  from {
+    transform: rotate3d(0, 0, 1, 0deg); }
+  5%, 17%, 29%, 41%, 53% {
+    transform: rotate3d(0, 0, 1, 0deg); }
+  8%, 20%, 32%, 44%, 56% {
+    transform: rotate3d(0, 0, 1, 10deg); }
+  11%, 23%, 35%, 47%, 59% {
+    transform: rotate3d(0, 0, 1, 0deg); }
+  14%, 26%, 38%, 50%, 62% {
+    transform: rotate3d(0, 0, 1, -10deg); }
+  65% {
+    transform: rotate3d(0, 0, 1, 0deg); } }
+
+@media screen and (max-width: 995px) {
+  #call-desktop {
+    display: none; } }
+
+@media screen and (min-width: 994px) {
+  #click-to-call {
+    display: none; } }
+
 #contact {
   background-color: #0470BA;
-  padding: 20px 0; }
+  padding-top: 30px;
+  padding-bottom: 40px; }
   #contact h1 {
     color: #fff;
-    font-size: 30px;
+    font-size: 2.5em;
     line-height: 50px;
-    padding: 10px; }
+    padding: 10px;
+    letter-spacing: 1.5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; }
   #contact p {
     font-size: 1.5em;
     margin: 10px auto 20px auto;
@@ -668,14 +933,20 @@ header {
       margin: 20px auto;
       color: #0470BA;
       font-size: 30px;
-      font-family: 'Oswald';
-      font-weight: 300;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
       background-color: #fff;
       -webkit-transition: all, 0.3s;
       -moz-transition: all, 0.3s;
       -ms-transition: all, 0.3s;
       -o-transition: all, 0.3s;
       transition: all, 0.3s; }
+      #contact form button i {
+        -webkit-transform: translateY(4px);
+        -moz-transform: translateY(4px);
+        -o-transform: translateY(4px);
+        -ms-transform: translateY(4px);
+        transform: translateY(4px); }
       #contact form button:hover {
         -webkit-transition: all, 0.3s;
         -moz-transition: all, 0.3s;
@@ -684,6 +955,8 @@ header {
         transition: all, 0.3s;
         background-color: #0470BA;
         color: #fff; }
+        #contact form button:hover i {
+          color: #fff; }
   #contact .form-inputs {
     width: 500px;
     max-width: 100%;
@@ -727,18 +1000,19 @@ header {
   #contact .input-field label {
     color: #0470BA;
     margin-bottom: 0;
-    margin-top: 6px;
+    margin-top: 8px;
     max-width: 100px;
     padding: 0 !important;
     font-size: 20px;
-    font-family: 'Quicksand';
+    font-family: 'Raleway', sans-serif;
     font-weight: 400; }
   #contact .input-field .prefix.active {
-    color: #024AA0; }
+    color: #0470BA; }
   #contact .material-icons {
     color: #0470BA;
     padding: 5px;
-    font-size: 30px; }
+    font-size: 30px;
+    margin-left: 7px; }
 
 .validation-msg {
   color: red; }
@@ -753,54 +1027,46 @@ header {
   display: none; }
 
 /* Footer */
-.line {
-  height: 4px;
-  width: 100%;
-  background-color: #055175; }
-  @media only screen and (max-width: 750px) {
-    .line {
-      display: none; } }
-
 footer {
   background-color: #232323; }
   footer #logo-footer {
-    padding: 7px 0; }
+    padding: 7px 0;
+    background: #fff; }
     footer #logo-footer img {
-      height: 75px;
-      margin: 0 auto;
+      width: 200px;
+      margin: 5px auto;
       display: block; }
   footer .footer-nav {
-    background-color: #fff; }
+    background-color: #e8e8e8; }
     @media only screen and (max-width: 750px) {
       footer .footer-nav {
         display: none; } }
     footer .footer-nav ul {
       display: table;
       margin: 0 auto;
-      padding: 10px 0;
-      background-color: #fff; }
+      padding: 10px 0; }
       footer .footer-nav ul li {
         display: inline-block;
-        font-family: 'Quicksand';
+        font-family: 'Raleway', sans-serif;
         font-weight: 400;
-        padding: 10px 20px;
+        padding: 5px 10px;
+        margin: 0 5px;
         font-size: 18px;
-        color: #0E3744;
-        border-radius: 4px;
-        -webkit-transition: all, 0.3s;
-        -moz-transition: all, 0.3s;
-        -ms-transition: all, 0.3s;
-        -o-transition: all, 0.3s;
-        transition: all, 0.3s; }
+        border-bottom: 2px solid #e8e8e8;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
         footer .footer-nav ul li:hover {
-          background-color: rgba(0, 0, 0, 0.1);
-          -webkit-transition: all, 0.3s;
-          -moz-transition: all, 0.3s;
-          -ms-transition: all, 0.3s;
-          -o-transition: all, 0.3s;
-          transition: all, 0.3s; }
+          border-bottom: 2px solid #0470BA;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -ms-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s; }
   footer .copyright {
-    background-color: #2d2d2d;
+    background-color: #083f66;
     color: #fff;
     text-align: center; }
     footer .copyright p {
@@ -816,7 +1082,6 @@ footer {
     width: 80px; }
   .modal-content h1 {
     text-align: center;
-    color: #0E3744;
     margin: 20px 0;
     line-height: 50px; }
   .modal-content p {
