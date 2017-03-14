@@ -8,7 +8,7 @@
 $dark-blue: #0470BA;
 $blue: #0470BA;
 $dark-navy-blue: #021F2D;
-$navy-blue: #0E3744;
+$green: #00d172;
 $dark-grey: #636363;
 $light-grey: #C1C1C1;
 
@@ -60,6 +60,14 @@ $light-grey: #C1C1C1;
   transform: translateY($y-angle);
 }
 
+@mixin scaleY ($y-angle) {
+  -webkit-transform: scaleY($y-angle);
+  -moz-transform: scaleY($y-angle);
+  -o-transform: scaleY($y-angle);
+  -ms-transform: scaleY($y-angle);
+  transform: scaleY($y-angle);
+}
+
 @mixin background ($url) {
   background: url($url) ;
   background-repeat: no-repeat;
@@ -89,6 +97,8 @@ body {
         padding: 0; }
     p , button{ font-family: 'Raleway', sans-serif; }
     .row { margin: 0; }
+
+    a { text-decoration: none !important; }
 }
 
 .col-md-4, .col-lg-4, .col-xs-2, .col-sm-2, .col-xs-8 , .col-sm-8 { padding: 0; }
@@ -292,7 +302,6 @@ nav {
         border: none;
         padding: 10px;
         width: 100%;
-        color: $navy-blue;
         @include box-shadow (0px, 2px, 11px, 0px, rgba(0,0,0,0.6));
     }
 }
@@ -359,10 +368,10 @@ header{
         height:  100%;
         padding: 50px 0 !important;
         @media only screen and (max-width: 420px) {
-            padding: 10px 0 !important;
+            padding: 10px !important;
         }
         @media only screen and (max-width: 360px) {
-            padding:  5px !important;
+            padding:  10px !important;
         }
 
         h1 {
@@ -375,8 +384,9 @@ header{
             margin: 0;
             @media only screen and ( max-width: 992px ) {
                 text-align: center;
+                background: rgba(0, 0, 0, 0.3);
                 font-size: 1.5em;
-                padding: 15px 0;
+                padding: 10px 0;
             }
         }
 
@@ -485,30 +495,98 @@ header{
         display: block;
         margin: 0 auto;
         max-width: 1110px;
-        @media only screen and (max-width: 1250px) { max-width: 1020px; }
-        @media only screen and (max-width: 1150px) { max-width: 960px; }
+        @media only screen and (max-width: 1250px) { max-width: 1050px; }
         .step-card {
             border-top: 5px solid #0470BA;
             background: #fff;
+            min-height: 285.8px;
             margin: 20px 10px;
             max-width: 350px;
             @include box-shadow (0, 3px, 5px, 0, rgba(0, 0, 0, 0.3));
-            @media only screen and (max-width: 1250px) { max-width: 320px; }
-            @media only screen and (max-width: 1150px) { max-width: 300px; }
-            @media only screen and (max-width: 400px) { max-width: 94%; }
-            @media only screen and (max-width: 990px) {
-                margin: 20px auto; }
+            @media only screen and (max-width: 1250px) { max-width: 330px; }
+            @media only screen and (max-width: 992px) { max-width: 350px; }
+            @media only screen and (max-width: 450px) { max-width: 94%; }
+            @media only screen and (max-width: 990px) { margin: 20px auto; }
             h3 {
                 font-family: 'Raleway', sans-serif;
                 font-size: 23px;  }
-            img {
+            .step-img {
                 width: 100%;
-                padding: 0; }
+                padding: 0;
+                height: 200px;
+                opacity: 1;
+                @include transition (height 0.4s, opacity 0.3s);  }
+
+            .step-img-1 { @include background('https://s3.us-east-2.amazonaws.com/cash-house-express/steps/sell-your-house-step-1.jpg'); }
+            .step-img-2 { @include background('https://s3.us-east-2.amazonaws.com/cash-house-express/steps/sell-your-house-step-2.jpg'); }
+            .step-img-3 { @include background('https://s3.us-east-2.amazonaws.com/cash-house-express/steps/sell-your-house-step-3.jpg'); }
+
             span {
                 font-family: 'Martel', serif;
                 font-size: 30px;
                 color: $blue;
                 padding: 0;
+            }
+            .step-card-hover {
+                background: $blue;
+                height: 0;
+                opacity: 1;
+                button {
+                    height: 0;
+                    opacity: 0;
+                }
+            }
+            .step-card-p {
+                font-size: 0;
+                opacity: 0;
+                @include transition (opacity 0.3s ease-in, font-size 0.1s linear);
+            }
+            &:hover {
+                .step-img {
+                    height: 0;
+                    opacity: 0;
+                    @include transition (height 0.2s, opacity 0.3s); }
+                .step-card-hover {
+                    height: 200px;
+                    position: relative;
+                   @include transition (height 0.2s linear, opacity 0.4s );
+                .step-card-p {
+                        opacity: 1;
+                        padding: 15px;
+                        color: #fff;
+                        font-size: 17px;
+                        @include transition (opacity 0.3s ease-in, font-size 0.1s linear);
+                    }
+                   .contact-buttons {
+                        position: absolute;
+                        left: 10%;
+                        top: 50%;
+                        @include translate(-10%, -50%);
+                        @media only screen and (max-width: 350px) {
+                        left: 10%;
+                        top: 50%;
+                        @include translate(-10%, -50%);
+                        }
+                        button {
+                            height: 40px;
+                            background: #fff;
+                            color: $blue;
+                            font-size: 18px;
+                            font-weight: 600;
+                            @include linearGradient(#fff, #e1e1e1);
+                            border: 1px solid #d1d1d1;
+                            @include border-radius (2px);
+                            margin: 0 0 20px 20px;
+                            padding: 5px 15px;
+                            opacity: 1;
+                            @include transition(all 0.3s);
+                            &:hover {
+                                @include linearGradient(#e1e1e1, #e1e1e1);
+                                @include transition(all 0.3s);
+                                @include box-shadow(0, 3px, 5px, 0, rgba(0, 0, 0, 0.5)); }
+                        }
+                    }
+                }
             }
         }
     }
@@ -558,9 +636,9 @@ header{
     display: block;
     .advantages-card{ @include box-shadow (0, 0, 3px, 0, rgba(0, 0, 0, 0.5)); }
     .cta-button {
-        @include translate(0, -71px);
         background: #f2f2f2;
         position: relative;
+        transform:translate(0, -71px);
         z-index: -1;
         display: block;
         margin: 0 auto;
@@ -750,7 +828,6 @@ footer {
                 font-weight: 400;
                 padding: 10px 20px;
                 font-size: 18px;
-                color: $navy-blue;
                 border-radius: 4px;
                 @include transition(all, 0.3s);
                 &:hover {
@@ -782,7 +859,6 @@ footer {
     }
     h1 {
         text-align: center;
-        color: $navy-blue;
         margin: 20px 0;
         line-height: 50px;
     }
