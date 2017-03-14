@@ -260,7 +260,7 @@ nav {
     img {
         padding: 0 !important;
         margin: 0 !important;
-        height: 80px;
+        width: 220px;
     }
 }
 
@@ -275,7 +275,7 @@ nav {
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    @include background('https://s3.amazonaws.com/market-lab-2.0/menu-background.jpg');
+    background: #fff;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -287,25 +287,43 @@ nav {
 .sidenav a {
     padding: 8px 12px;
     margin: 10px 10px;
-    font-family: 'Quicksand';
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.3);
+    color: $blue;
+    border: 1px solid $blue;
     display: block;
-    @include box-shadow (0px, 1px, 2px, 0px, rgba(0,0,0,0.6))
+    border: 1px solid #c1c1c1;
+    @include border-radius(3px);
+    @include linearGradient(#fff, #f0f0f0);
+
 }
+
+.no-border { border: none !important; }
+
 #call-btn-mobile {
     background: none;
     padding: 0;
-    button {
-        background-color: $blue;
-        border: none;
-        padding: 10px;
-        width: 100%;
-        @include box-shadow (0px, 2px, 11px, 0px, rgba(0,0,0,0.6));
-    }
+    background: $blue;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 24px;
+    padding: 0;
+    border: 2px solid #00875c;
+    @include linearGradient(#00d172, #00A672);
+    i {
+        font-size: 30px;
+        margin: 12px 10px 12px 0;
+        display: inline-block; }
+    p {
+        display: inline-block;
+        margin-bottom: 0;
+        @include translateY(-6px); }
+
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -316,7 +334,7 @@ nav {
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     font-size: 36px;
-    color: #fff;
+    color: $blue;
     position: absolute;
     top: 0;
     right: 25px;
@@ -699,30 +717,6 @@ header{
     }
 }
 
-/* Slogan */
-
-#slogan {
-    @include background ('https://s3.amazonaws.com/market-lab-2.0/slogan-parallax.jpg');
-    height: 500px;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    h1 {
-        color: #fff;
-        font-size: 3.3em;
-        width: 100%;
-        line-height: 70px;
-        text-align: center;
-        text-shadow: -4px 3px 14px rgba(0, 0, 0, 0.9);
-        font-weight: 400;
-        @media only screen and (max-width: 350px) {
-            font-size: 3em;
-        }
-    }
-}
-
 /* Form */
 
     .call-button-desktop {
@@ -730,11 +724,11 @@ header{
        .col-md-4 { padding: 0 0 0 0; }
        max-width: 250px;
        margin: 0 auto !important;
-       background: #00d172;
+       background: #00A672;
        display: block;
-       border: 2px solid #00A672;
+       border: 2px solid #1c776f;
        @include border-radius (8px);
-       @media screen and (max-width: 995px) { @include box-shadow (0px, 3px, 3px, 0px, rgba(0,0,0,0.3)); }
+       @media screen and (max-width: 995px) { @include box-shadow (0px, 2px, 2px, 0px, rgba(0,0,0,0.3)); }
        h4 {
        padding: 10.5px 10px 10.5px 0 !important;
        border: none;
@@ -746,10 +740,13 @@ header{
        letter-spacing: 0.5px;
        color: #fff;
        line-height: 25px;
-       @include border-radius (0 5px 5px 0)
        margin: 0;
        z-index: 0 !important;
        position: relative;
+        @include border-radius (0 5px 5px 0)
+        span {
+            font-family: sans-serif !important;
+            font-weight: 400;}
        }
        img {
          height: 70px;

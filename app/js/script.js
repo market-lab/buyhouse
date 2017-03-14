@@ -2,7 +2,7 @@
 /* Menu Controls */
 
 $( document ).ready(function(){
-    $('#menu-button').click( function(){
+    $('.menu-icon').click( function(){
         $('.sidenav').width('90%');
         $('#menu-effect').fadeIn(1000);
     });
@@ -10,20 +10,6 @@ $( document ).ready(function(){
     $('.closebtn, #mySidenav a').click( function(){
         $('.sidenav').width('0');
         $('#menu-effect').fadeOut(100);
-    });
-
-    $('#dropdown, .dropdown-content').mouseenter( function(){
-        $('.dropdown-content').removeClass('dropdown-off');
-        $('.dropdown-content').addClass('dropdown-active');
-    });
-
-    $('#dropdown, .dropdown-content').mouseleave( function(){
-        $('.dropdown-content').removeClass('dropdown-active');
-        $('.dropdown-content').addClass('dropdown-off');
-    });
-
-    $('.dropdown-content a').click( function(){
-        $('.dropdown-content').removeClass('dropdown-active');
     });
 
     $('#myModal').on('shown.bs.modal', function () {
