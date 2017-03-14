@@ -42,7 +42,7 @@
     <!-- Facebook Pixel Code -->  <!-- End Facebook Pixel Code -->
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Martel:400,700|Raleway:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Martel:400|Raleway:400,600" rel="stylesheet">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -100,9 +100,10 @@
 
     <header id="home">
         <div class="mask"></div>
+        <h1 class="h1-mobile">REAL ESTATE INVESTORS</h1>
         <img src="https://s3.us-east-2.amazonaws.com/cash-house-express/sell-your-house-header.jpg">
         <div class="header-content">
-            <h1>REAL ESTATE INVESTORS</h1>
+            <h1 class="h1-desktop">REAL ESTATE INVESTORS</h1>
             <h2>Sell Your House Fast<br>And Make Money Now</h2>
             <p>We buy all kinds of houses, and we often can close in as quickly as 30 days.</p>
             <a class="smooth-scroll" href="#contact">
@@ -124,17 +125,27 @@
         <div class="row step-cards">
             <div class="col-md-4 col-lg-4 step-card">
                 <div class="step-img step-img-1"></div>
-                <h3><span>1.</span>Call or Submit<br>Your Information</h3>
+                <div class="step-card-header">
+                    <h3><span>1.</span>Call or Submit<br>Your Information</h3>
+                    <i class="material-icons off">add_circle_outline</i>
+                    <i class="material-icons active">remove_circle_outline</i>
+                </div>
                 <div class="step-card-hover">
                     <div class="contact-buttons">
-                        <button>CALL NOW</button>
-                        <button>SUBMIT INFORMATION</button>
+                        <button href="tel: 984-825-7717">CALL NOW</button>
+                        <a class="smooth-scroll" href="#contact">
+                            <button>SUBMIT INFORMATION</button>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-04 col-md-4 col-lg-4 step-card">
                 <div class="step-img step-img-2"></div>
-                <h3><span>2.</span>Introduce Us<br>To Your Home</h3>
+                <div class="step-card-header">
+                    <h3><span>2.</span>Introduce Us<br>To Your Home</h3>
+                    <i class="material-icons off">add_circle_outline</i>
+                    <i class="material-icons active">remove_circle_outline</i>
+                </div>
                 <div class="step-card-hover">
                     <div class="step-card-p">
                         <p>Our Home Buying Specialist will meet you at your house to do a walk through and check on any needed repairs. Don’t worry,we’ll
@@ -144,7 +155,11 @@
             </div>
             <div class="col-sm-04 col-md-4 col-lg-4 step-card">
                 <div class="step-img step-img-3"></div>
-                <h3><span>3.</span>Choose Your<br>Closing Date</h3>
+                <div class="step-card-header">
+                    <h3><span>3.</span>Choose Your<br>Closing Date</h3>
+                    <i class="material-icons off">add_circle_outline</i>
+                    <i class="material-icons active">remove_circle_outline</i>
+                </div>
                 <div class="step-card-hover">
                     <div class="step-card-p">
                         <p>It’s really that easy. We’ll work on your timeline and take care of all of the details for you.
@@ -282,7 +297,16 @@
 
     <section id="contact">
         <h1 class="text-center">LET’S TALK ABOUT YOUR PROJECT</h1>
-        <form>
+            <form>
+                <div class="call-button-desktop row">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                      <img class="trin-trin" src="https://s3.us-east-2.amazonaws.com/total.help/Icons/phone-icon.png"/>
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-xs-8">
+                      <h4 id="call-desktop">LIGUE AGORA:<br>(888)-633-3355</h4>
+                      <a href="tel: 888-633-3355" id="click-to-call"><h4>CLIQUE AQUI<br>E LIGUE AGORA</h4></a>
+                    </div>
+                </div>
             <p class="text-center">We are ready to listen to your plans and talk about how we can help you grow your bussines online.</p>
             <div class="row form-inputs">
                 <div class="input-field col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -322,13 +346,13 @@
             <ul>
                 <a class="smooth-scroll" href="#home"><li class="">Home</li></a>
                 <a class="smooth-scroll" href="#about"><li class="">About</li></a>
-                <a class="smooth-scroll" href="#about"><li class="">Sell You House</li></a>
-                <a class="smooth-scroll" href="#services-digital-marketing"><li class="">Advantages</li></a>
+                <a class="smooth-scroll" href="#sell-your-house"><li class="">Sell You House</li></a>
+                <a class="smooth-scroll" href="#advantages"><li class="">Advantages</li></a>
             </ul>
         </div>
         <div id="logo-footer">
             <a class="smooth-scroll" href="#home">
-                <img src="https://s3.amazonaws.com/market-lab-2.0/logo-marketlab-digital-marketing-agency-white.png" alt="marketlab digital marketing agency logo">
+                <img src="https://s3.us-east-2.amazonaws.com/cash-house-express/house-cash-logo.png" alt="Logo House Cash Express">
             </a>
         </div>
         <div class="copyright">

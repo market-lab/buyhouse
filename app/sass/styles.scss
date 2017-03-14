@@ -92,7 +92,6 @@ body {
     transition: background-color .5s;
     h1, h2, {
         font-family: 'Martel', sans-serif;
-        font-weight:  400;
         margin: 0;
         padding: 0; }
     p , button{ font-family: 'Raleway', sans-serif; }
@@ -200,12 +199,15 @@ nav {
             .nav-list-item {
                 color: #7c7c7c;
                 font-size: 18px;
-                padding: 0 5px;
+                padding: 5px 10px;
                 cursor: pointer;
-                border-radius: 4px;
+                border-bottom: 2px solid #fff;
+                border-left: 2px solid #fff;
                 @include transition(all 0.3s);
                 &:hover {
-                    background: rgba(0, 0, 0, 0.2);
+                    background: rgba(0, 0, 0, 0.05);
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+                    border-left: 2px solid rgba(0, 0, 0, 0.2);
                     @include transition(all 0.3s); }
             }
             a { text-decoration: none; }
@@ -346,9 +348,28 @@ header{
         background-color: rgba(52, 167, 215, 1);
     }
 
+    h1 {
+        color: #fff;
+        text-align: left;
+        font-family: 'Raleway', serif;
+        font-weight:  600;
+        letter-spacing: 1.2px;
+        font-size: 1.5em;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+        padding: 15px 50px;
+        margin: 0;
+        @media only screen and ( max-width: 992px ) {
+            text-align: center;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+            background: #00A672;
+            font-size: 1.5em;
+            padding: 10px 10px;
+        }
+    }
+
     img{
         max-width: 100%;
-        @media only screen and (min-width: 993px) {display:none;}
+        @media only screen and (min-width: 993px) { display: none; }
     }
 
     .mask{
@@ -363,6 +384,9 @@ header{
         @media only screen and ( max-width: 992px ) {display: none;}
     }
 
+    .h1-desktop { @media only screen and ( max-width: 992px ) { display:none; } }
+    .h1-mobile { @media only screen and ( min-width: 992px ) { display:none; } }
+
     .header-content {
         position: relative;
         height:  100%;
@@ -374,22 +398,6 @@ header{
             padding:  10px !important;
         }
 
-        h1 {
-            color: #fff;
-            text-align: left;
-            font-family: 'Raleway', serif;
-            font-weight:  400;
-            font-size: 1.5em;
-            padding: 15px 50px;
-            margin: 0;
-            @media only screen and ( max-width: 992px ) {
-                text-align: center;
-                background: rgba(0, 0, 0, 0.3);
-                font-size: 1.5em;
-                padding: 10px 0;
-            }
-        }
-
         h2 {
             color: #fff;
             font-family: 'Martel', serif;
@@ -399,13 +407,14 @@ header{
             margin: 0;
             padding: 15px 50px;
             line-height: 75px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
 
              @media only screen and ( max-width: 992px ) {
                 text-align: center;
-                font-size: 2.2em !important;
+                font-size: 2em !important;
                 line-height: 45px !important;
-                padding: 15px 0;
-            }
+                padding: 15px 0 0 0; }
+            @media only screen and ( max-width: 330px ) { font-size: 1.8em !important; }
         }
 
         p {
@@ -413,6 +422,7 @@ header{
             font-family: 'Raleway', sans-serif;
             text-align: left;
             font-size: 1.6em;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
             max-width: 600px;
             margin: 0;
             display: block;
@@ -423,13 +433,10 @@ header{
                 text-align: center;
                  font-size: 1.4em;
                 max-width: 100%;
-                padding: 15px 0;
+                padding: 15px 20px;
             }
 
-            @media only screen and (max-width: 330px) {
-                padding: 10px;
-                font-size: 1.4em;
-            }
+            @media only screen and (max-width: 330px) { padding: 10px; }
         }
 
         a{
@@ -485,17 +492,12 @@ header{
         text-align: center;
         color: $blue;
         font-size: 2.4em; }
-    h3 {
-        text-align: center;
-        color: $blue;
-        font-size: 1.8em;
-        padding: 12px 0;
-        margin: 0; }
     .step-cards {
         display: block;
         margin: 0 auto;
         max-width: 1110px;
         @media only screen and (max-width: 1250px) { max-width: 1050px; }
+        @media only screen and (max-width: 1170px) { max-width: 960px; }
         .step-card {
             border-top: 5px solid #0470BA;
             background: #fff;
@@ -504,12 +506,31 @@ header{
             max-width: 350px;
             @include box-shadow (0, 3px, 5px, 0, rgba(0, 0, 0, 0.3));
             @media only screen and (max-width: 1250px) { max-width: 330px; }
+            @media only screen and (max-width: 1170px) { max-width: 300px; }
             @media only screen and (max-width: 992px) { max-width: 350px; }
             @media only screen and (max-width: 450px) { max-width: 94%; }
             @media only screen and (max-width: 990px) { margin: 20px auto; }
-            h3 {
-                font-family: 'Raleway', sans-serif;
-                font-size: 23px;  }
+            .step-card-header {
+                h3 {
+                    font-family: 'Raleway', sans-serif;
+                    text-align: center;
+                    display: inline-block;
+                    color: $blue;
+                    font-size: 1.8em;
+                    padding: 12px 0;
+                    margin: 0 0 0 30px;  }
+
+                i {
+                    font-size: 40px;
+                    padding: 22px 5px;
+                    margin-right: 20px;
+                    color: $green;
+                    float: right;
+                    @include transition(color 0.4s); }
+                .off { display: inline-block}
+                .active { display: none; }
+
+            }
             .step-img {
                 width: 100%;
                 padding: 0;
@@ -542,6 +563,17 @@ header{
                 @include transition (opacity 0.3s ease-in, font-size 0.1s linear);
             }
             &:hover {
+                i {
+                    display: inline-block;
+                    font-size: 40px;
+                    padding: 22px 5px;
+                    margin-right: 20px;
+                    color: $blue;
+                    @include transition(color 0.4s);
+                    }
+                .off { display: none; }
+                .active { display: inline-block; }
+
                 .step-img {
                     height: 0;
                     opacity: 0;
@@ -649,7 +681,9 @@ header{
         -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.5);
         -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.5);
         box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.5);
-        @media only screen and (max-width: 992px) {@include translate (0, 0);}
+        @media only screen and (max-width: 992px) {
+            @include translate (0, 0);
+            z-index: 1; }
         button {
             font-size: 20px;
             padding: 0 20px;
@@ -691,15 +725,88 @@ header{
 
 /* Form */
 
+    .call-button-desktop {
+       .col-md-8 { padding: 0; }
+       .col-md-4 { padding: 0 0 0 0; }
+       max-width: 250px;
+       margin: 0 auto !important;
+       background: #00d172;
+       display: block;
+       border: 2px solid #00A672;
+       @include border-radius (8px);
+       @media screen and (max-width: 995px) { @include box-shadow (0px, 3px, 3px, 0px, rgba(0,0,0,0.3)); }
+       h4 {
+       padding: 10.5px 10px 10.5px 0 !important;
+       border: none;
+       font-family: 'Raleway', sans-serif;
+       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+       font-weight: 600;
+       font-size: 19px;
+       text-align: center;
+       letter-spacing: 0.5px;
+       color: #fff;
+       line-height: 25px;
+       @include border-radius (0 5px 5px 0)
+       margin: 0;
+       z-index: 0 !important;
+       position: relative;
+       }
+       img {
+         height: 70px;
+         margin: 0;
+         z-index: 99 !important;
+         position: relative;
+       }
+    }
+
+    .trin-trin {
+        animation-name: trin;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes trin {
+
+        from {
+            transform:rotate3d(0, 0, 1, 0deg);
+        }
+        5%, 17%, 29%, 41%, 53% {
+            transform: rotate3d(0, 0, 1, 0deg);
+        }
+        8%, 20%, 32%, 44%, 56% {
+            transform: rotate3d(0,0,1,10deg);
+        }
+        11%, 23%, 35%, 47%, 59% {
+            transform: rotate3d(0,0,1,0deg);
+        }
+        14%, 26%, 38%, 50%, 62% {
+            transform: rotate3d(0,0,1,-10deg);
+        }
+        65% {
+            transform:rotate3d(0, 0, 1, 0deg);
+        }
+
+    }
+
+
+
+    #call-desktop { @media screen and (max-width: 995px) { display: none; } }
+    #click-to-call { @media screen and (min-width: 994px) { display: none; } }
+
+
 #contact {
-  background-color: $dark-blue;
+  background-color: $blue;
   padding-top: 30px;
   padding-bottom: 40px;
   h1{
     color: #fff;
-    font-size: 3em;
-    line-height: 60px;
-    padding: 20px 10px; }
+    font-size: 2.5em;
+    line-height: 50px;
+    padding: 10px;
+    letter-spacing: 1.5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; }
   p {
     font-size: 1.5em;
     margin: 10px auto 20px auto;
@@ -719,8 +826,8 @@ header{
         margin: 20px auto;
         color: $dark-blue;
         font-size: 30px;
-        font-family: 'Oswald';
-        font-weight: 300;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
         background-color: #fff;
         @include transition(all, 0.3s);
         &:hover {
@@ -772,11 +879,11 @@ header{
     .input-field label {
         color: $dark-blue;
         margin-bottom: 0;
-        margin-top: 6px;
+        margin-top: 8px;
         max-width: 100px;
         padding: 0 !important;
         font-size: 20px;
-        font-family: 'Quicksand';
+        font-family: 'Raleway', sans-serif;
         font-weight: 400;
     }
 
@@ -788,6 +895,7 @@ header{
         color: $dark-blue;
         padding: 5px;
         font-size: 30px;
+        margin-left: 7px;
     }
 }
 .validation-msg { color: red; }
@@ -797,51 +905,44 @@ header{
 
 /* Footer */
 
-.line {
-    height: 4px;
-    width: 100%;
-    background-color: #055175;
-    @media only screen and (max-width: 750px) { display: none; }
-}
-
 footer {
     background-color: #232323;
     #logo-footer{
         padding: 7px 0;
+        background: #fff;
         img {
-            height: 75px;
-            margin: 0 auto;
+            width: 200px;
+            margin: 5px auto;
             display: block;
         }
     }
     .footer-nav {
-        background-color: #fff;
+        background-color: #e8e8e8;
         @media only screen and (max-width: 750px) { display: none; }
         ul {
             display: table;
             margin: 0 auto;
             padding: 10px 0;
-            background-color: #fff;
             li {
                 display: inline-block;
-                font-family: 'Quicksand';
+                font-family: 'Raleway', sans-serif;
                 font-weight: 400;
-                padding: 10px 20px;
+                padding: 5px 10px;
+                margin: 0 5px;
                 font-size: 18px;
-                border-radius: 4px;
-                @include transition(all, 0.3s);
+                border-bottom: 2px solid #e8e8e8;
+                @include transition(all 0.3s);
                 &:hover {
-                    background-color: rgba(0, 0, 0, 0.1);
-                    @include transition(all, 0.3s);
+                    border-bottom: 2px solid $blue;
+                    @include transition(all 0.3s);
                 }
             }
         }
     }
     .copyright {
-        background-color: #2d2d2d;
+        background-color: #083f66;
         color: #fff;
         text-align: center;
-
         p {
             padding: 10px;
             margin: 0;
