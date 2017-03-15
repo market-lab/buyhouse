@@ -4,7 +4,7 @@
 $( document ).ready(function(){
     $('.menu-icon').click( function(){
         $('.sidenav').width('90%');
-        $('#menu-effect').fadeIn(1000);
+        $('#menu-effect').fadeIn(800);
     });
 
     $('.closebtn, #mySidenav a').click( function(){
@@ -15,6 +15,14 @@ $( document ).ready(function(){
     $('#myModal').on('shown.bs.modal', function () {
       $('#myInput').focus()
     })
+
+  $('.step-card').on('click', function() { // when you click the div
+    $(this).addClass('no-hover'); // add the class 'no-hover'
+  });
+
+  $('.step-card').click(function(){
+   $(this).toggleClass('active');
+});
 
     /* Smooth Scroll */
     $(function() {
