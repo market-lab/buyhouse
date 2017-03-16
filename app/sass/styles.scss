@@ -199,15 +199,13 @@ nav {
             .nav-list-item {
                 color: #7c7c7c;
                 font-size: 18px;
-                padding: 5px 10px;
+                padding: 10px 15px;
                 cursor: pointer;
                 border-bottom: 2px solid #fff;
-                border-left: 2px solid #fff;
                 @include transition(all 0.3s);
                 &:hover {
-                    background: rgba(0, 0, 0, 0.05);
+                    color: #3f3e3e;
                     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-                    border-left: 2px solid rgba(0, 0, 0, 0.2);
                     @include transition(all 0.3s); }
             }
             a { text-decoration: none; }
@@ -399,6 +397,14 @@ header{
         -webkit-clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%);
         clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%);
         @media only screen and (max-width: 996px) {height: 570px;}
+        @media only screen and ( max-width: 1500px ) {
+            -webkit-clip-path: polygon(0 0, 550px 0, 620px 100%, 0% 100%);
+            clip-path: polygon(0 0, 550px 0, 620px 100%, 0% 100%);
+        }
+        @media only screen and ( max-width: 1200px ) {
+            -webkit-clip-path: polygon(0 0, 550px 0, 620px 100%, 0% 100%);
+            clip-path: polygon(0 0, 520px 0, 580px 100%, 0% 100%);
+        }
         @media only screen and ( max-width: 992px ) {display: none;}
     }
 
@@ -426,8 +432,9 @@ header{
             padding: 15px 50px;
             line-height: 75px;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
-
-             @media only screen and ( max-width: 992px ) {
+            @media only screen and ( max-width: 1500px ) { font-size: 3em; }
+            @media only screen and ( max-width: 1200px ) { font-size: 2.8em; }
+            @media only screen and ( max-width: 992px ) {
                 text-align: center;
                 font-size: 2.5em !important;
                 line-height: 45px !important;
@@ -547,7 +554,7 @@ header{
                     float: right;
                     @include transition(color 0.4s); }
                 .off { display: inline-block}
-                .active { display: none; }
+                .active-btn { display: none; }
 
             }
             .step-img {
@@ -581,7 +588,7 @@ header{
                 opacity: 0;
                 @include transition (opacity 0.3s ease-in, font-size 0.1s linear);
             }
-            &:hover {
+            &:active, &:hover{
                 i {
                     display: inline-block;
                     font-size: 40px;
@@ -591,7 +598,7 @@ header{
                     @include transition(color 0.4s);
                     }
                 .off { display: none; }
-                .active { display: inline-block; }
+                .active-btn { display: inline-block; }
 
                 .step-img {
                     height: 0;
@@ -601,6 +608,7 @@ header{
                     height: 200px;
                     position: relative;
                    @include transition (height 0.2s linear, opacity 0.4s );
+                   @media only screen and (max-width: 450px) { height: 220px; }
                 .step-card-p {
                         opacity: 1;
                         padding: 15px;
@@ -797,7 +805,7 @@ header{
   background-color: $blue;
   padding-top: 30px;
   padding-bottom: 40px;
-  h1{
+  h2{
     color: #fff;
     font-size: 2.5em;
     line-height: 50px;
@@ -805,15 +813,16 @@ header{
     letter-spacing: 1.5px;
     font-family: 'Raleway', sans-serif;
     font-weight: 600; }
+  .margin-fix { margin-top: 10px; }
   p {
     font-size: 1.5em;
-    margin: 10px auto 20px auto;
+    margin: 20px auto 10px auto;
     max-width: 420px;
     color: $dark-grey; }
   form {
     max-width: 600px;
     margin: 20px auto;
-    padding: 20px 10px 20px 10px;
+    padding: 20px 10px;
     background-color: #fff;
     @include box-shadow (0, 7px, 15px, 0, rgba(0, 0, 0, 0.3));
     button {
@@ -842,7 +851,7 @@ header{
         width: 500px;
         max-width: 100%;
         display: block;
-        margin: 0 auto !important;
+        margin: 20px auto 0 auto !important;
         .input-field {
             margin-bottom: 15px;
             input {
@@ -907,39 +916,16 @@ header{
 /* Footer */
 
 footer {
-    background-color: #232323;
     #logo-footer{
         padding: 7px 0;
-        background: #fff;
+        background: #f2f2f2;
         img {
             width: 200px;
             margin: 5px auto;
             display: block;
         }
     }
-    .footer-nav {
-        background-color: #e8e8e8;
-        @media only screen and (max-width: 750px) { display: none; }
-        ul {
-            display: table;
-            margin: 0 auto;
-            padding: 10px 0;
-            li {
-                display: inline-block;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 400;
-                padding: 5px 10px;
-                margin: 0 5px;
-                font-size: 18px;
-                border-bottom: 2px solid #e8e8e8;
-                @include transition(all 0.3s);
-                &:hover {
-                    border-bottom: 2px solid $blue;
-                    @include transition(all 0.3s);
-                }
-            }
-        }
-    }
+    .footer-nav { background-color: #fff; }
     .copyright {
         background-color: #083f66;
         color: #fff;
@@ -948,6 +934,39 @@ footer {
             padding: 10px;
             margin: 0;
         }
+    }
+    #social-share {
+      max-width: 190px;
+      display: block;
+      margin: 0 auto;
+      padding: 10px 0;
+      h3 {
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        margin: 5px auto;
+        font-size: 20px;
+        font-weight: 300;
+        color: $dark-grey; }
+    a {
+      display: inline-block;
+      margin: 5px;
+      cursor: pointer; }
+    .facebook-share {
+      background: url('https://s3.us-east-2.amazonaws.com/total.help/Icons/social-share.png') no-repeat -8px -5px;
+      width: 50px;
+      height: 50px;
+      @media only screen and (min-width: 992px) { @include translate(65px,0); }
+     }
+    .fb-messenger-share {
+      background: url('https://s3.us-east-2.amazonaws.com/total.help/Icons/social-share.png') no-repeat -139px -5px;
+      width: 50px;
+      height: 50px;
+      @media only screen and (min-width: 992px) { display: none; } }
+    .whatsapp-share {
+      background: url('https://s3.us-east-2.amazonaws.com/total.help/Icons/social-share.png') no-repeat -75px -5px;
+      width: 50px;
+      height: 50px;
+      @media only screen and (min-width: 992px) { display: none; } }
     }
 }
 

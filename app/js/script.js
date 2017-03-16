@@ -4,7 +4,7 @@
 $( document ).ready(function(){
     $('.menu-icon').click( function(){
         $('.sidenav').width('90%');
-        $('#menu-effect').fadeIn(1000);
+        $('#menu-effect').fadeIn(800);
     });
 
     $('.closebtn, #mySidenav a').click( function(){
@@ -15,6 +15,10 @@ $( document ).ready(function(){
     $('#myModal').on('shown.bs.modal', function () {
       $('#myInput').focus()
     })
+
+    $('#active-btn-1').click(function () {
+      $('#step-card-2').click();
+    });
 
     /* Smooth Scroll */
     $(function() {
