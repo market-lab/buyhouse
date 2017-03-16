@@ -16,13 +16,9 @@ $( document ).ready(function(){
       $('#myInput').focus()
     })
 
-  $('.step-card').on('click', function() { // when you click the div
-    $(this).addClass('no-hover'); // add the class 'no-hover'
-  });
-
-  $('.step-card').click(function(){
-   $(this).toggleClass('active');
-});
+    $('#active-btn-1').click(function () {
+      $('#step-card-2').click();
+    });
 
     /* Smooth Scroll */
     $(function() {

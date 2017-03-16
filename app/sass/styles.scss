@@ -588,7 +588,7 @@ header{
                 opacity: 0;
                 @include transition (opacity 0.3s ease-in, font-size 0.1s linear);
             }
-            &:hover, &:active{
+            &:active, &:hover{
                 i {
                     display: inline-block;
                     font-size: 40px;
@@ -805,7 +805,7 @@ header{
   background-color: $blue;
   padding-top: 30px;
   padding-bottom: 40px;
-  h1{
+  h2{
     color: #fff;
     font-size: 2.5em;
     line-height: 50px;
@@ -813,15 +813,16 @@ header{
     letter-spacing: 1.5px;
     font-family: 'Raleway', sans-serif;
     font-weight: 600; }
+  .margin-fix { margin-top: 10px; }
   p {
     font-size: 1.5em;
-    margin: 10px auto 20px auto;
+    margin: 20px auto 10px auto;
     max-width: 420px;
     color: $dark-grey; }
   form {
     max-width: 600px;
     margin: 20px auto;
-    padding: 20px 10px 20px 10px;
+    padding: 20px 10px;
     background-color: #fff;
     @include box-shadow (0, 7px, 15px, 0, rgba(0, 0, 0, 0.3));
     button {
@@ -850,7 +851,7 @@ header{
         width: 500px;
         max-width: 100%;
         display: block;
-        margin: 0 auto !important;
+        margin: 20px auto 0 auto !important;
         .input-field {
             margin-bottom: 15px;
             input {
