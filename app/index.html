@@ -50,6 +50,10 @@
     <!-- Css -->
     <link rel="stylesheet" href="css/styles.css">
 
+    <!-- AOS -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
 </head>
 <body>
     <nav class="row navbar-fixed-top">
@@ -104,7 +108,7 @@
             <h2>Sell Your House Fast<br>And Make Money Now</h2>
             <p>We buy all kinds of houses, and we often can close in as quickly as 30 days.</p>
             <a class="smooth-scroll" href="#contact">
-                <button class="green-button">GET A FAIR CASH OFFER</button>
+                <button class="green-button" data-aos="zoom-in" data-aos-delay="200">GET A FAIR CASH OFFER</button>
             </a>
         </div>
     </header>
@@ -120,7 +124,7 @@
     <main id="sell-your-house">
         <h2>Your House Sold<br>in 3 Simple Steps</h2>
         <div class="row step-cards">
-            <div class="col-md-4 col-lg-4 step-card">
+            <div class="col-md-4 col-lg-4 step-card" data-aos="fade-up" data-aos-delay="0">
                 <div class="step-img step-img-1"></div>
                 <div class="step-card-header">
                     <h3><span>1.</span>Call or Submit<br>Your Information</h3>
@@ -129,14 +133,14 @@
                 </div>
                 <div class="step-card-hover">
                     <div class="contact-buttons">
-                        <button href="tel: 984-825-7717">CALL NOW</button>
+                        <button data-aos="zoom-in" data-aos-delay="200" href="tel: 984-825-7717">CALL NOW</button>
                         <a class="smooth-scroll" href="#contact">
-                            <button>SUBMIT INFORMATION</button>
+                            <button data-aos="zoom-in" data-aos-delay="200">SUBMIT INFORMATION</button>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-04 col-md-4 col-lg-4 step-card">
+            <div class="col-sm-04 col-md-4 col-lg-4 step-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="step-img step-img-2"></div>
                 <div class="step-card-header">
                     <h3><span>2.</span>Introduce Us<br>To Your Home</h3>
@@ -150,7 +154,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-04 col-md-4 col-lg-4 step-card">
+            <div class="col-sm-04 col-md-4 col-lg-4 step-card" data-aos="fade-up" data-aos-delay="400">
                 <div class="step-img step-img-3"></div>
                 <div class="step-card-header">
                     <h3><span>3.</span>Choose Your<br>Closing Date</h3>
@@ -169,7 +173,7 @@
 
     <section id="advantages">
         <h2>Advantages of Selling to an Investor</h2>
-        <div class="slide-effect">
+        <div class="slide-effect" data-aos="fade-right" data-aos-duration="500">
             <div class="row advantages-card">
                 <div class="box-content">
                     <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
@@ -189,7 +193,7 @@
             </div>
         </div>
 
-        <div class="slide-effect">
+        <div class="slide-effect" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="row advantages-card">
                 <div class="box-content">
                     <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
@@ -209,7 +213,7 @@
             </div>
         </div>
 
-        <div class="slide-effect">
+        <div class="slide-effect" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
             <div class="row advantages-card">
                 <div class="box-content">
                     <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
@@ -229,7 +233,7 @@
             </div>
         </div>
 
-        <div class="slide-effect">
+        <div class="slide-effect" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="row advantages-card">
                 <div class="box-content">
                     <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
@@ -249,7 +253,7 @@
             </div>
         </div>
 
-        <div class="slide-effect">
+        <div class="slide-effect" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
             <div class="row advantages-card">
                 <div class="box-content">
                     <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
@@ -269,7 +273,7 @@
             </div>
         </div>
 
-        <div class="slide-effect">
+        <div class="slide-effect" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="row advantages-card">
                 <div class="box-content">
                     <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
@@ -292,7 +296,7 @@
     <section id="contact">
         <h2 class="text-center">WE ARE READY TO BUY<br>YOUR HOUSE NOW.</h2>
             <form>
-                <div class="call-button-desktop row">
+                <div class="call-button-desktop row" data-aos="zoom-in" data-aos-delay="400">
                     <div class="col-md-4 col-sm-4 col-xs-4">
                       <img class="trin-trin" src="https://s3.us-east-2.amazonaws.com/total.help/Icons/phone-icon.png"/>
                     </div>
@@ -384,6 +388,12 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+    </script>
 
 </body>
 
