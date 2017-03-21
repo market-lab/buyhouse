@@ -528,6 +528,7 @@ header{
             border-top: 5px solid #0470BA;
             background: #fff;
             min-height: 285.8px;
+            height: 285.8px;
             margin: 20px 10px;
             max-width: 350px;
             @include box-shadow (0, 3px, 5px, 0, rgba(0, 0, 0, 0.3));
@@ -562,7 +563,7 @@ header{
                 padding: 0;
                 height: 200px;
                 opacity: 1;
-                @include transition (height 0.4s, opacity 0.3s);  }
+                @include transition (height 0.2s, opacity 0.3s);  }
 
             .step-img-1 { @include background('https://s3.us-east-2.amazonaws.com/cash-house-express/steps/sell-your-house-step-1.jpg'); }
             .step-img-2 { @include background('https://s3.us-east-2.amazonaws.com/cash-house-express/steps/sell-your-house-step-2.jpg'); }
@@ -588,67 +589,67 @@ header{
                 opacity: 0;
                 @include transition (opacity 0.3s ease-in, font-size 0.1s linear);
             }
-            &:active, &:hover{
-                i {
-                    display: inline-block;
-                    font-size: 40px;
-                    padding: 22px 5px;
-                    margin-right: 20px;
-                    color: $blue;
-                    @include transition(color 0.4s);
-                    }
-                .off { display: none; }
-                .active-btn { display: inline-block; }
-
-                .step-img {
-                    height: 0;
-                    opacity: 0;
-                    @include transition (height 0.2s, opacity 0.3s); }
-                .step-card-hover {
-                    height: 200px;
-                    position: relative;
-                   @include transition (height 0.2s linear, opacity 0.4s );
-                   @media only screen and (max-width: 450px) { height: 220px; }
-                .step-card-p {
-                        opacity: 1;
-                        padding: 15px;
-                        color: #fff;
-                        font-size: 17px;
-                        @include transition (opacity 0.3s ease-in, font-size 0.1s linear);
-                    }
-                   .contact-buttons {
-                        position: absolute;
-                        left: 10%;
-                        top: 50%;
-                        @include translate(-10%, -50%);
-                        @media only screen and (max-width: 350px) {
-                        left: 10%;
-                        top: 50%;
-                        @include translate(-10%, -50%);
-                        }
-                        button {
-                            height: 40px;
-                            background: #fff;
-                            color: $blue;
-                            font-size: 18px;
-                            font-weight: 600;
-                            @include linearGradient(#fff, #e1e1e1);
-                            border: 1px solid #d1d1d1;
-                            @include border-radius (2px);
-                            margin: 0 0 20px 20px;
-                            padding: 5px 15px;
-                            opacity: 1;
-                            @include transition(all 0.3s);
-                            &:hover {
-                                @include linearGradient(#e1e1e1, #e1e1e1);
-                                @include transition(all 0.3s);
-                                @include box-shadow(0, 3px, 5px, 0, rgba(0, 0, 0, 0.5)); }
-                        }
-                    }
-                }
-            }
         }
     }
+}
+
+.step-hover{
+    i {
+        display: inline-block !important;
+        font-size: 40px !important;
+        padding: 22px 5px !important;
+        margin-right: 20px !important;
+        color: $blue !important;
+        @include transition(color 0.4s);
+        }
+    .off { display: none !important; }
+    .active-btn { display: inline-block !important; }
+    .step-img {
+       height: 0 !important;
+       opacity: 0 !important;
+       @include transition (height 0.2s, opacity 0.3s);}
+   .step-card-hover {
+       height: 200px !important;
+       position: relative !important;
+      @include transition (height 0.2s linear, opacity 0.4s );
+      @media only screen and (max-width: 450px) { height: 220px; }
+   .step-card-p {
+           opacity: 1 !important;
+           padding: 15px !important;
+           color: #fff !important;
+           font-size: 17px !important;
+           @include transition (opacity 0.3s ease-in, font-size 0.1s linear);
+       }
+      .contact-buttons {
+           position: absolute !important;
+           left: 10% !important;
+           top: 50% !important;
+           @include translate(-10%, -50%);
+           @media only screen and (max-width: 350px) {
+           left: 10% !important;
+           top: 50% !important;
+           @include translate(-10%, -50%);
+           }
+           button {
+               height: 40px !important;
+               background: #fff !important;
+               color: $blue !important;
+               font-size: 18px !important;
+               font-weight: 600 !important;
+               @include linearGradient(#fff, #e1e1e1);
+               border: 1px solid #d1d1d1 !important;
+               @include border-radius (2px);
+               margin: 0 0 20px 20px !important;
+               padding: 5px 15px !important;
+               opacity: 1 !important;
+               @include transition(all 0.3s);
+               &:hover {
+                   @include linearGradient(#e1e1e1, #e1e1e1);
+                   @include transition(all 0.3s);
+                   @include box-shadow(0, 3px, 5px, 0, rgba(0, 0, 0, 0.5)); }
+           }
+       }
+   }
 }
 
 /* Advantages */

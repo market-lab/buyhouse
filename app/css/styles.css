@@ -542,6 +542,7 @@ header {
       border-top: 5px solid #0470BA;
       background: #fff;
       min-height: 285.8px;
+      height: 285.8px;
       margin: 20px 10px;
       max-width: 350px;
       -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
@@ -590,11 +591,11 @@ header {
         padding: 0;
         height: 200px;
         opacity: 1;
-        -webkit-transition: height 0.4s, opacity 0.3s;
-        -moz-transition: height 0.4s, opacity 0.3s;
-        -ms-transition: height 0.4s, opacity 0.3s;
-        -o-transition: height 0.4s, opacity 0.3s;
-        transition: height 0.4s, opacity 0.3s; }
+        -webkit-transition: height 0.2s, opacity 0.3s;
+        -moz-transition: height 0.2s, opacity 0.3s;
+        -ms-transition: height 0.2s, opacity 0.3s;
+        -o-transition: height 0.2s, opacity 0.3s;
+        transition: height 0.2s, opacity 0.3s; }
       #sell-your-house .step-cards .step-card .step-img-1 {
         background: url("https://s3.us-east-2.amazonaws.com/cash-house-express/steps/sell-your-house-step-1.jpg");
         background-repeat: no-repeat;
@@ -639,127 +640,132 @@ header {
         -ms-transition: opacity 0.3s ease-in, font-size 0.1s linear;
         -o-transition: opacity 0.3s ease-in, font-size 0.1s linear;
         transition: opacity 0.3s ease-in, font-size 0.1s linear; }
-      #sell-your-house .step-cards .step-card:active i, #sell-your-house .step-cards .step-card:hover i {
-        display: inline-block;
-        font-size: 40px;
-        padding: 22px 5px;
-        margin-right: 20px;
-        color: #0470BA;
-        -webkit-transition: color 0.4s;
-        -moz-transition: color 0.4s;
-        -ms-transition: color 0.4s;
-        -o-transition: color 0.4s;
-        transition: color 0.4s; }
-      #sell-your-house .step-cards .step-card:active .off, #sell-your-house .step-cards .step-card:hover .off {
-        display: none; }
-      #sell-your-house .step-cards .step-card:active .active-btn, #sell-your-house .step-cards .step-card:hover .active-btn {
-        display: inline-block; }
-      #sell-your-house .step-cards .step-card:active .step-img, #sell-your-house .step-cards .step-card:hover .step-img {
-        height: 0;
-        opacity: 0;
-        -webkit-transition: height 0.2s, opacity 0.3s;
-        -moz-transition: height 0.2s, opacity 0.3s;
-        -ms-transition: height 0.2s, opacity 0.3s;
-        -o-transition: height 0.2s, opacity 0.3s;
-        transition: height 0.2s, opacity 0.3s; }
-      #sell-your-house .step-cards .step-card:active .step-card-hover, #sell-your-house .step-cards .step-card:hover .step-card-hover {
-        height: 200px;
-        position: relative;
-        -webkit-transition: height 0.2s linear, opacity 0.4s;
-        -moz-transition: height 0.2s linear, opacity 0.4s;
-        -ms-transition: height 0.2s linear, opacity 0.4s;
-        -o-transition: height 0.2s linear, opacity 0.4s;
-        transition: height 0.2s linear, opacity 0.4s; }
-        @media only screen and (max-width: 450px) {
-          #sell-your-house .step-cards .step-card:active .step-card-hover, #sell-your-house .step-cards .step-card:hover .step-card-hover {
-            height: 220px; } }
-        #sell-your-house .step-cards .step-card:active .step-card-hover .step-card-p, #sell-your-house .step-cards .step-card:hover .step-card-hover .step-card-p {
-          opacity: 1;
-          padding: 15px;
-          color: #fff;
-          font-size: 17px;
-          -webkit-transition: opacity 0.3s ease-in, font-size 0.1s linear;
-          -moz-transition: opacity 0.3s ease-in, font-size 0.1s linear;
-          -ms-transition: opacity 0.3s ease-in, font-size 0.1s linear;
-          -o-transition: opacity 0.3s ease-in, font-size 0.1s linear;
-          transition: opacity 0.3s ease-in, font-size 0.1s linear; }
-        #sell-your-house .step-cards .step-card:active .step-card-hover .contact-buttons, #sell-your-house .step-cards .step-card:hover .step-card-hover .contact-buttons {
-          position: absolute;
-          left: 10%;
-          top: 50%;
-          -webkit-transform: translate(-10%, -50%);
-          -moz-transform: translate(-10%, -50%);
-          -o-transform: translate(-10%, -50%);
-          -ms-transform: translate(-10%, -50%);
-          transform: translate(-10%, -50%); }
-          @media only screen and (max-width: 350px) {
-            #sell-your-house .step-cards .step-card:active .step-card-hover .contact-buttons, #sell-your-house .step-cards .step-card:hover .step-card-hover .contact-buttons {
-              left: 10%;
-              top: 50%;
-              -webkit-transform: translate(-10%, -50%);
-              -moz-transform: translate(-10%, -50%);
-              -o-transform: translate(-10%, -50%);
-              -ms-transform: translate(-10%, -50%);
-              transform: translate(-10%, -50%); } }
-          #sell-your-house .step-cards .step-card:active .step-card-hover .contact-buttons button, #sell-your-house .step-cards .step-card:hover .step-card-hover .contact-buttons button {
-            height: 40px;
-            background: #fff;
-            color: #0470BA;
-            font-size: 18px;
-            font-weight: 600;
-            background: #fff;
-            /* Old browsers */
-            background: -moz-linear-gradient(top, #fff 0%, #e1e1e1 100%);
-            /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #e1e1e1));
-            /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, #fff 0%, #e1e1e1 100%);
-            /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, #fff 0%, #e1e1e1 100%);
-            /* Opera 11.10+ */
-            background: -ms-linear-gradient(top, #fff 0%, #e1e1e1 100%);
-            /* IE10+ */
-            background: linear-gradient(to bottom, #fff 0%, #e1e1e1 100%);
-            /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
-            /* IE6-9 */
-            border: 1px solid #d1d1d1;
-            -webkit-border-radius: 2px;
-            -moz-border-radius: 2px;
-            border-radius: 2px;
-            margin: 0 0 20px 20px;
-            padding: 5px 15px;
-            opacity: 1;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s; }
-            #sell-your-house .step-cards .step-card:active .step-card-hover .contact-buttons button:hover, #sell-your-house .step-cards .step-card:hover .step-card-hover .contact-buttons button:hover {
-              background: #e1e1e1;
-              /* Old browsers */
-              background: -moz-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
-              /* FF3.6+ */
-              background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e1e1e1), color-stop(100%, #e1e1e1));
-              /* Chrome,Safari4+ */
-              background: -webkit-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
-              /* Chrome10+,Safari5.1+ */
-              background: -o-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
-              /* Opera 11.10+ */
-              background: -ms-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
-              /* IE10+ */
-              background: linear-gradient(to bottom, #e1e1e1 0%, #e1e1e1 100%);
-              /* W3C */
-              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
-              /* IE6-9 */
-              -webkit-transition: all 0.3s;
-              -moz-transition: all 0.3s;
-              -ms-transition: all 0.3s;
-              -o-transition: all 0.3s;
-              transition: all 0.3s;
-              -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
-              -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
-              box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5); }
+
+.step-hover i {
+  display: inline-block !important;
+  font-size: 40px !important;
+  padding: 22px 5px !important;
+  margin-right: 20px !important;
+  color: #0470BA !important;
+  -webkit-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  -ms-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  transition: color 0.4s; }
+
+.step-hover .off {
+  display: none !important; }
+
+.step-hover .active-btn {
+  display: inline-block !important; }
+
+.step-hover .step-img {
+  height: 0 !important;
+  opacity: 0 !important;
+  -webkit-transition: height 0.2s, opacity 0.3s;
+  -moz-transition: height 0.2s, opacity 0.3s;
+  -ms-transition: height 0.2s, opacity 0.3s;
+  -o-transition: height 0.2s, opacity 0.3s;
+  transition: height 0.2s, opacity 0.3s; }
+
+.step-hover .step-card-hover {
+  height: 200px !important;
+  position: relative !important;
+  -webkit-transition: height 0.2s linear, opacity 0.4s;
+  -moz-transition: height 0.2s linear, opacity 0.4s;
+  -ms-transition: height 0.2s linear, opacity 0.4s;
+  -o-transition: height 0.2s linear, opacity 0.4s;
+  transition: height 0.2s linear, opacity 0.4s; }
+  @media only screen and (max-width: 450px) {
+    .step-hover .step-card-hover {
+      height: 220px; } }
+  .step-hover .step-card-hover .step-card-p {
+    opacity: 1 !important;
+    padding: 15px !important;
+    color: #fff !important;
+    font-size: 17px !important;
+    -webkit-transition: opacity 0.3s ease-in, font-size 0.1s linear;
+    -moz-transition: opacity 0.3s ease-in, font-size 0.1s linear;
+    -ms-transition: opacity 0.3s ease-in, font-size 0.1s linear;
+    -o-transition: opacity 0.3s ease-in, font-size 0.1s linear;
+    transition: opacity 0.3s ease-in, font-size 0.1s linear; }
+  .step-hover .step-card-hover .contact-buttons {
+    position: absolute !important;
+    left: 10% !important;
+    top: 50% !important;
+    -webkit-transform: translate(-10%, -50%);
+    -moz-transform: translate(-10%, -50%);
+    -o-transform: translate(-10%, -50%);
+    -ms-transform: translate(-10%, -50%);
+    transform: translate(-10%, -50%); }
+    @media only screen and (max-width: 350px) {
+      .step-hover .step-card-hover .contact-buttons {
+        left: 10% !important;
+        top: 50% !important;
+        -webkit-transform: translate(-10%, -50%);
+        -moz-transform: translate(-10%, -50%);
+        -o-transform: translate(-10%, -50%);
+        -ms-transform: translate(-10%, -50%);
+        transform: translate(-10%, -50%); } }
+    .step-hover .step-card-hover .contact-buttons button {
+      height: 40px !important;
+      background: #fff !important;
+      color: #0470BA !important;
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      background: #fff;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #fff 0%, #e1e1e1 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #e1e1e1));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #fff 0%, #e1e1e1 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #fff 0%, #e1e1e1 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #fff 0%, #e1e1e1 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #fff 0%, #e1e1e1 100%);
+      /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+      /* IE6-9 */
+      border: 1px solid #d1d1d1 !important;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      margin: 0 0 20px 20px !important;
+      padding: 5px 15px !important;
+      opacity: 1 !important;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+      .step-hover .step-card-hover .contact-buttons button:hover {
+        background: #e1e1e1;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e1e1e1), color-stop(100%, #e1e1e1));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
+        /* IE10+ */
+        background: linear-gradient(to bottom, #e1e1e1 0%, #e1e1e1 100%);
+        /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+        /* IE6-9 */
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5); }
 
 /* Advantages */
 #advantages {

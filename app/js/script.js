@@ -16,8 +16,22 @@ $( document ).ready(function(){
       $('#myInput').focus()
     })
 
-    $('#active-btn-1').click(function () {
-      $('#step-card-2').click();
+    $('.step-card-1').click(function () {
+      $('.step-card-1').toggleClass("step-hover");
+      $('.step-card-2').removeClass("step-hover");
+      $('.step-card-3').removeClass("step-hover");
+    });
+
+    $('.step-card-2').click(function () {
+      $('.step-card-2').toggleClass("step-hover");
+      $('.step-card-1').removeClass("step-hover");
+      $('.step-card-3').removeClass("step-hover");
+    });
+
+    $('.step-card-3').click(function () {
+      $('.step-card-3').toggleClass("step-hover");
+      $('.step-card-1').removeClass("step-hover");
+      $('.step-card-2').removeClass("step-hover");
     });
 
     /* Smooth Scroll */
