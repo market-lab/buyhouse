@@ -319,7 +319,7 @@
                         <i class="material-icons prefix col-xs-2 col-sm-2 col-md-2 col-lg-2">account_circle</i>
                         <label for="name" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">Name</label>
                     </div>
-                    <input id="icon_prefix" type="text" placeholder="Name" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <input id="icon_prefix" name="name" type="text" placeholder="Name" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <i class="validation-msg validation-name col-xs-12 col-sm-12 col-md-12 col-lg-12">! Please write your name</i>
                 </div>
                 <div class="input-field col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -327,7 +327,7 @@
                         <i class="material-icons prefix col-xs-2 col-sm-2 col-md-2 col-lg-2">phone</i>
                         <label for="phone" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">Phone</label>
                     </div>
-                    <input id="icon_telephone" type="tel" placeholder="Phone" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <input id="icon_telephone" name="phone" type="tel" placeholder="Phone" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <i class="validation-msg validation-phone col-xs-12 col-sm-12 col-md-12 col-lg-12">! Please write your name</i>
                 </div>
                 <div class="input-field col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -335,7 +335,7 @@
                         <i class="material-icons prefix col-xs-2 col-sm-2 col-md-2 col-lg-2">email</i>
                         <label for="email" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">E-mail</label>
                     </div>
-                    <input  type="email" placeholder="Email" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <input  type="email" name="email" placeholder="Email" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <i class="validation-msg validation-email col-xs-12 col-sm-12 col-md-12 col-lg-12">! Please write your e-mail</i>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -381,6 +381,26 @@
       </div>
     </div>
 
+    <!-- Loading Modal -->
+    <div id="loading" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-loading">
+        <div class="modal-loading-animation">
+          <div class='uil-ripple-css' style='transform:scale(0.33);'><div></div><div></div></div>
+          <div><h1 id="loading-message"></h1>Saving your data</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="error-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-body">
+          <img src="https://s3.us-east-2.amazonaws.com/total.help/Icons/sign-error.png" alt="error icon">
+          <h1>Ops!</h1>
+          <p id="error-message">A problem happened.<br>Please, check your data and try again.</p>
+          <a type="button" class="btn .btn-default .btn-md" data-dismiss="modal">FECHAR</a>
+        </div>
+    </div>
+
     <!-- Material Design Font Icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -398,6 +418,25 @@
         easing: 'ease-in-out-sine'
       });
     </script>
+
+    <!--Start of Zendesk Chat Script-->
+    <script type="text/javascript">
+    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+    d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+    _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+    $.src="https://v2.zopim.com/?4gVqrF2bbswojHmuziazZCT2kVCgnuqt";z.t=+new Date;$.
+    type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    </script>
+    <!--End of Zendesk Chat Script-->
+
+    <!--Crazyegg-->
+    <script type="text/javascript">
+    setTimeout(function(){var a=document.createElement("script");
+    var b=document.getElementsByTagName("script")[0];
+    a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0063/3413.js?"+Math.floor(new Date().getTime()/3600000);
+    a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+    </script>
+
 
 </body>
 

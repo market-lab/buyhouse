@@ -52,32 +52,36 @@ $( document ).ready(function(){
 
     $('form').on('submit', function() {
         event.preventDefault();
+
+        $('#loading').modal('show');
+
         var $form = $(this);
 
         // Group lead form information
         var lead = {
             'title': "Marketlab",
             'person_id': $form.find('input[name="name"]').val().toString(),
-            'f15b83bc3c4fc9a1cb7a9822a1bfc868ec5455a2': $form.find('input[name="phone"]').val().toString(),
-            '49ab34054a1744140276442017c55eabd90fbe87': $form.find('input[name="email"]').val().toString()
+            '0f94af856946affa1bc35154710b168c74440b7f': $form.find('input[name="phone"]').val().toString(),
+            '59c0a401c5cfd30d1ca8d865a83ce56617221102': $form.find('input[name="email"]').val().toString()
         }
 
         // Send a AJAX POST request to database
         $.ajax({
             type: 'POST',
-            url: 'https://api.pipedrive.com/v1/deals?api_token=566e4ed8f9e50b101a4f2525a349cf8c47f9041c',
+            url: 'https://api.pipedrive.com/v1/deals?api_token=2dbe67833ce1eb6b5f496ec588dfac2f9463447b',
             data: lead,
             dataType: 'json',
             cache: false,
             beforeSend: function() {
-                $('button').prop('disabled', true);
+              $('button').prop('disabled', true);
             }
         }).done(function() {
-            $('#sent-data').modal('show');
-            document.getElementById($form.attr('id')).reset();
+            $('#loading').modal('toggle');
+            window.location.replace("/thanks.html");
             $('button').prop('disabled', false);
         }).fail(function() {
-            alert("Ops, some problem happened with your contact. Please, try again.");
+            $('#loading').modal('toggle');
+            $("#error-modal").modal('show');
             $('button').prop('disabled', false);
         });
     });

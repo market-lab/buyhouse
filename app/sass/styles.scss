@@ -10,6 +10,7 @@ $blue: #0470BA;
 $dark-navy-blue: #021F2D;
 $green: #00d172;
 $dark-grey: #636363;
+$grey: #878787;
 $light-grey: #C1C1C1;
 
 /* Mixins */
@@ -1042,7 +1043,7 @@ footer {
 
 #main-thanks{
     display: block;
-    margin: 100px auto;
+    margin: 110px auto 20px;
     width: 300px;
 
     .thanks-box{
@@ -1068,4 +1069,101 @@ footer {
     }
         
 
+}
+
+.uil-ripple-css {
+  background: none;
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+.uil-ripple-css div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  border-radius: 50%;
+  border-width: 12px;
+  border-style: solid;
+  -ms-animation: uil-ripple 2s ease-out infinite;
+  -moz-animation: uil-ripple 2s ease-out infinite;
+  -webkit-animation: uil-ripple 2s ease-out infinite;
+  -o-animation: uil-ripple 2s ease-out infinite;
+  animation: uil-ripple 2s ease-out infinite;
+}
+.uil-ripple-css div:nth-of-type(1) {
+  border-color: #878787;
+}
+.uil-ripple-css div:nth-of-type(2) {
+  border-color: #ffc519;
+  -ms-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+/* Loading Modal */
+
+#loading {
+    h1 {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 300;
+        color: $dark-grey;
+        text-align: center;
+        margin: 15px auto;
+        background: #fff; }
+    .modal-loading {
+        background: #fff;
+        width: 300px;
+        height: 300px;
+        margin: 10% auto;
+        border-radius: 4px;
+        display: block;
+        position: relative;
+        .modal-loading-animation{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include translate (-50%,-50%);
+        }
+    }
+}
+
+/* Error Modal */
+
+#error-modal {
+    .modal-body {
+      background: #fff;
+      width: 300px;
+      height: 350px;
+      margin: 10% auto;
+      border-radius: 4px;
+      display: block;
+      text-align: center;
+      img {
+        display: block;
+        margin: 20px auto 10px auto;
+        width: 100px; }
+      h1 {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        color: $dark-grey;
+        margin: 5px auto; }
+      p { font-size: 20px; }
+      a {
+        cursor: pointer;
+        border: 1px solid $grey;
+        background: #fff;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        color: $dark-grey;
+        padding: 5px 10px;
+        &:hover { background: #f2f2f2; }
+      }
+    }
 }

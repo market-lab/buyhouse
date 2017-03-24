@@ -1182,7 +1182,7 @@ footer #social-share {
 /*** Thanks ***/
 #main-thanks {
   display: block;
-  margin: 100px auto;
+  margin: 110px auto 20px;
   width: 300px; }
   #main-thanks .thanks-box {
     -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
@@ -1201,3 +1201,96 @@ footer #social-share {
       font-size: 1.3em;
       padding: 20px 0;
       text-align: center; }
+
+.uil-ripple-css {
+  background: none;
+  position: relative;
+  width: 250px;
+  height: 250px; }
+
+.uil-ripple-css div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  border-radius: 50%;
+  border-width: 12px;
+  border-style: solid;
+  -ms-animation: uil-ripple 2s ease-out infinite;
+  -moz-animation: uil-ripple 2s ease-out infinite;
+  -webkit-animation: uil-ripple 2s ease-out infinite;
+  -o-animation: uil-ripple 2s ease-out infinite;
+  animation: uil-ripple 2s ease-out infinite; }
+
+.uil-ripple-css div:nth-of-type(1) {
+  border-color: #878787; }
+
+.uil-ripple-css div:nth-of-type(2) {
+  border-color: #ffc519;
+  -ms-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s; }
+
+/* Loading Modal */
+#loading h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  color: #636363;
+  text-align: center;
+  margin: 15px auto;
+  background: #fff; }
+
+#loading .modal-loading {
+  background: #fff;
+  width: 300px;
+  height: 300px;
+  margin: 10% auto;
+  border-radius: 4px;
+  display: block;
+  position: relative; }
+  #loading .modal-loading .modal-loading-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+/* Error Modal */
+#error-modal .modal-body {
+  background: #fff;
+  width: 300px;
+  height: 350px;
+  margin: 10% auto;
+  border-radius: 4px;
+  display: block;
+  text-align: center; }
+  #error-modal .modal-body img {
+    display: block;
+    margin: 20px auto 10px auto;
+    width: 100px; }
+  #error-modal .modal-body h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: #636363;
+    margin: 5px auto; }
+  #error-modal .modal-body p {
+    font-size: 20px; }
+  #error-modal .modal-body a {
+    cursor: pointer;
+    border: 1px solid #878787;
+    background: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #636363;
+    padding: 5px 10px; }
+    #error-modal .modal-body a:hover {
+      background: #f2f2f2; }
