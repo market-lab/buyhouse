@@ -206,7 +206,25 @@ nav {
       font-size: 38px !important;
       color: #0470BA;
       display: inline-block;
-      margin: 0 5px; }
+      margin: 0 5px;
+      animation-name: trin;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear; }
+
+@keyframes trin {
+  from {
+    transform: rotate3d(0, 0, 1, 0deg); }
+  5%, 17%, 29%, 41%, 53% {
+    transform: rotate3d(0, 0, 1, 0deg); }
+  8%, 20%, 32%, 44%, 56% {
+    transform: rotate3d(0, 0, 1, 10deg); }
+  11%, 23%, 35%, 47%, 59% {
+    transform: rotate3d(0, 0, 1, 0deg); }
+  14%, 26%, 38%, 50%, 62% {
+    transform: rotate3d(0, 0, 1, -10deg); }
+  65% {
+    transform: rotate3d(0, 0, 1, 0deg); } }
       @media only screen and (max-width: 340px) {
         nav #nav-mobile .nav-buttons .call-icon {
           margin-right: 0; } }
@@ -474,6 +492,8 @@ header {
       display: block;
       line-height: 1.4em;
       padding: 15px 50px; }
+      header .header-content p b {
+        font-size: 1.3em; }
       @media only screen and (max-width: 992px) {
         header .header-content p {
           text-align: center;
@@ -490,7 +510,7 @@ header {
         font-size: 25px;
         padding: 0 30px;
         height: 60px;
-        margin: 15px 0 30px 0; }
+        margin: 14px 0 30px 0; }
         @media only screen and (max-width: 992px) {
           header .header-content a button {
             margin: 0 auto;
@@ -498,7 +518,7 @@ header {
             font-size: 22px; } }
         @media only screen and (max-width: 360px) {
           header .header-content a button {
-            font-size: 20px; } }
+            font-size: 19px; } }
 
 /* About */
 #about {
@@ -1073,7 +1093,10 @@ footer #social-share {
   max-width: 190px;
   display: block;
   margin: 0 auto;
-  padding: 10px 0; }
+  padding: 10px 33px; }
+  @media only screen and (min-width: 992px) {
+    footer #social-share {
+      padding: 10px 0; } }
   footer #social-share h3 {
     text-align: center;
     font-family: 'Raleway', sans-serif;
@@ -1155,3 +1178,26 @@ footer #social-share {
       -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
       -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
       box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3); }
+
+/*** Thanks ***/
+#main-thanks {
+  display: block;
+  margin: 100px auto;
+  width: 300px; }
+  #main-thanks .thanks-box {
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3); }
+    #main-thanks .thanks-box img {
+      max-width: 300px; }
+    #main-thanks .thanks-box h2 {
+      color: #fff;
+      text-align: center;
+      background-color: #0470BA;
+      padding: 15px 0;
+      font-size: 2.6em; }
+    #main-thanks .thanks-box p {
+      background-color: #f2f2f2;
+      font-size: 1.3em;
+      padding: 20px 0;
+      text-align: center; }
