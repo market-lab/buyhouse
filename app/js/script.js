@@ -16,7 +16,7 @@ $( document ).ready(function(){
       $('#myInput').focus()
     })
 
-    $('.step-card-header').click(function () {
+    $('.trigger-hover').click(function () {
       $('.step-card-1').toggleClass("step-hover");
       $('.step-card-2').removeClass("step-hover");
       $('.step-card-3').removeClass("step-hover");

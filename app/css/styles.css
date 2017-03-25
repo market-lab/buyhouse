@@ -440,7 +440,7 @@ header {
   header .mask {
     background-color: rgba(52, 167, 215, 0.95);
     position: absolute;
-    height: 530px;
+    height: 531px;
     width: 100%;
     margin: 0 -5px;
     -webkit-clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%);
@@ -563,6 +563,9 @@ header {
     margin: 20px auto; }
 
 /* Sell Your House */
+.trigger-hover {
+  height: 84px; }
+
 #sell-your-house {
   background: #f2f2f2;
   padding: 30px 0; }

@@ -381,7 +381,7 @@ nav {
 
 #home{
     background-size: cover;
-    @include background ('https://s3.us-east-2.amazonaws.com/cash-house-express/sell-your-house-header.jpg');    
+    @include background ('https://s3.us-east-2.amazonaws.com/cash-house-express/sell-your-house-header.jpg');
     @media only screen and (max-width: 992px) {
         @include background ('');
         background-color: rgba(52, 167, 215, 1);
@@ -390,7 +390,7 @@ nav {
 
 #home-2{
     background-size: cover;
-    @include background ('https://s3.us-east-2.amazonaws.com/cash-house-express/sell-your-house-header2.jpg');    
+    @include background ('https://s3.us-east-2.amazonaws.com/cash-house-express/sell-your-house-header2.jpg');
     @media only screen and (max-width: 992px) {
         @include background ('');
         background-color: rgba(52, 167, 215, 1);
@@ -401,7 +401,7 @@ header {
 
     color: #fff;
     z-index: 1 !important;
-    margin-top: 70px !important;    
+    margin-top: 70px !important;
 
     h1 {
         color: #fff;
@@ -430,7 +430,7 @@ header {
     .mask{
         background-color: rgba(52, 167, 215, 0.95);
         position: absolute;
-        height: 530px;
+        height: 531px;
         width: 100%;
         margin: 0 -5px;
         -webkit-clip-path: polygon(0 0, 645px 0, 705px 100%, 0% 100%);
@@ -550,6 +550,8 @@ header {
 }
 
 /* Sell Your House */
+
+.trigger-hover { height: 84px; }
 
 #sell-your-house {
     background: #f2f2f2;
@@ -1060,10 +1062,10 @@ footer {
     width: 300px;
 
     .thanks-box{
-        @include box-shadow(0px, 2px, 6px, 0px,  rgba(0, 0, 0, 0.3) );        
+        @include box-shadow(0px, 2px, 6px, 0px,  rgba(0, 0, 0, 0.3) );
 
         img { max-width: 300px; }
-        
+
         h2 {
             color: #fff;
             text-align: center;
@@ -1071,7 +1073,7 @@ footer {
             padding: 15px 0;
             font-size: 2.6em;
         }
-        
+
         p{
             background-color: #f2f2f2;
             font-size: 1.3em;
@@ -1080,7 +1082,7 @@ footer {
 
         }
     }
-        
+
 
 }
 

@@ -51,7 +51,7 @@
 
     <!-- AOS -->
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>    
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
 </head>
 <body>
@@ -128,10 +128,12 @@
             <div data-aos="fade-up" data-aos-delay="0">
                 <div class="col-md-4 col-lg-4 step-card step-card-1">
                     <div class="step-img step-img-1"></div>
-                    <div class="step-card-header">
-                        <h3><span>1.</span>Call or Submit<br>Your Information</h3>
-                        <i class="material-icons off">add_circle_outline</i>
-                        <i class="material-icons active-btn">remove_circle_outline</i>
+                    <div class="trigger-hover">
+                        <div class="step-card-header">
+                            <h3><span>1.</span>Call or Submit<br>Your Information</h3>
+                            <i class="material-icons off">add_circle_outline</i>
+                            <i class="material-icons active-btn">remove_circle_outline</i>
+                        </div>
                     </div>
                     <div class="step-card-hover">
                         <div class="contact-buttons">
@@ -179,7 +181,7 @@
     </main>
     <section id="advantages">
         <h2>Advantages of Selling to an Investor</h2>
-        
+
         <div class="slide-effect" data-aos="fade-up" data-aos-duration="500" >
             <div class="row advantages-card">
                 <div class="box-content">
@@ -258,7 +260,7 @@
                     <button class="green-button">GET A CASH OFFER NOW</button>
                 </a>
             </div>
-        </div>                
+        </div>
 
         <div class="slide-effect" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="row advantages-card">
@@ -347,15 +349,26 @@
         </form>
     </section>
     <div class="line"></div>
+
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
     <footer>
         <div class="footer-nav">
             <div id="social-share">
               <h3>Share:</h3>
-              <a id="shareBtn">
-                <div class="facebook-share"></div>
+              <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhousecashexpress.com%2F&amp;src=sdkpreparse">
+                <div class="facebook-share" data-href="http://housecashexpress.com/" data-layout="button_count" data-size="small" data-mobile-iframe="true">
+                </div>
               </a>
-              
-              <a href="fb-messenger://share/?link= http://atendimento.totalhelponline.com/&app_id=1449980495027289">
+              <a href="fb-messenger://share/?link= http://housecashexpress.com/&app_id=1669205836427636">
                 <div class="fb-messenger-share"></div>
               </a>
             </div>
@@ -438,7 +451,7 @@
     a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
     </script>
 
-    <!--Google Analytics-->  
+    <!--Google Analytics-->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
