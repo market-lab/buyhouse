@@ -379,16 +379,29 @@ nav {
 
 /* Header */
 
-header{
-    @include background ('https://s3.us-east-2.amazonaws.com/cash-house-express/sell-your-house-header.jpg');
+#home{
     background-size: cover;
-    color: #fff;
-    z-index: 1 !important;
-    margin-top: 70px !important;
+    @include background ('https://s3.us-east-2.amazonaws.com/cash-house-express/sell-your-house-header.jpg');    
     @media only screen and (max-width: 992px) {
         @include background ('');
         background-color: rgba(52, 167, 215, 1);
     }
+}
+
+#home-2{
+    background-size: cover;
+    @include background ('https://s3.us-east-2.amazonaws.com/cash-house-express/sell-your-house-header2.jpg');    
+    @media only screen and (max-width: 992px) {
+        @include background ('');
+        background-color: rgba(52, 167, 215, 1);
+    }
+}
+
+header {
+
+    color: #fff;
+    z-index: 1 !important;
+    margin-top: 70px !important;    
 
     h1 {
         color: #fff;

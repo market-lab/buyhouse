@@ -371,20 +371,17 @@ nav {
     font-size: 18px; } }
 
 /* Header */
-header {
+#home {
+  background-size: cover;
   background: url("https://s3.us-east-2.amazonaws.com/cash-house-express/sell-your-house-header.jpg");
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  background-size: cover;
-  color: #fff;
-  z-index: 1 !important;
-  margin-top: 70px !important; }
+  background-size: cover; }
   @media only screen and (max-width: 992px) {
-    header {
+    #home {
       background: url("");
       background-repeat: no-repeat;
       background-position: center;
@@ -393,6 +390,31 @@ header {
       -o-background-size: cover;
       background-size: cover;
       background-color: #34a7d7; } }
+
+#home-2 {
+  background-size: cover;
+  background: url("https://s3.us-east-2.amazonaws.com/cash-house-express/sell-your-house-header2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  @media only screen and (max-width: 992px) {
+    #home-2 {
+      background: url("");
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-color: #34a7d7; } }
+
+header {
+  color: #fff;
+  z-index: 1 !important;
+  margin-top: 70px !important; }
   header h1 {
     color: #fff;
     text-align: left;
