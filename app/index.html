@@ -53,6 +53,22 @@
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '286029881820247'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=286029881820247&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+
 </head>
 <body>
     <nav class="row navbar-fixed-top">
@@ -314,40 +330,41 @@
                       <a href="tel: 888-633-3355" id="click-to-call"><h4>Click Here<br>And Call Now</h4></a>
                     </div>
                 </div>
-            <p class="text-center">- OR -</p>
-            <p class="text-center margin-fix">Give us your contact information and we will call you with a good cash offer and a fast closing.</p>
-            <div class="row form-inputs">
-                <div class="input-field col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="label-icon">
-                        <i class="material-icons prefix col-xs-2 col-sm-2 col-md-2 col-lg-2">account_circle</i>
-                        <label for="name" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">Name</label>
+                <p class="text-center">- OR -</p>
+                <p class="text-center margin-fix">Give us your contact information and we will call you with a good cash offer and a fast closing.</p>
+                <input type="hidden" name="page_id" value="Page-1"/>
+                <div class="row form-inputs">
+                    <div class="input-field col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="label-icon">
+                            <i class="material-icons prefix col-xs-2 col-sm-2 col-md-2 col-lg-2">account_circle</i>
+                            <label for="name" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">Name</label>
+                        </div>
+                        <input id="icon_prefix" name="name" type="text" placeholder="Name" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" required>
+                        <i class="validation-msg validation-name col-xs-12 col-sm-12 col-md-12 col-lg-12">! Please write your name</i>
                     </div>
-                    <input id="icon_prefix" name="name" type="text" placeholder="Name" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <i class="validation-msg validation-name col-xs-12 col-sm-12 col-md-12 col-lg-12">! Please write your name</i>
-                </div>
-                <div class="input-field col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="label-icon">
-                        <i class="material-icons prefix col-xs-2 col-sm-2 col-md-2 col-lg-2">phone</i>
-                        <label for="phone" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">Phone</label>
+                    <div class="input-field col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="label-icon">
+                            <i class="material-icons prefix col-xs-2 col-sm-2 col-md-2 col-lg-2">phone</i>
+                            <label for="phone" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">Phone</label>
+                        </div>
+                        <input id="icon_telephone" name="phone" type="tel" placeholder="Phone" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" required>
+                        <i class="validation-msg validation-phone col-xs-12 col-sm-12 col-md-12 col-lg-12">! Please write your name</i>
                     </div>
-                    <input id="icon_telephone" name="phone" type="tel" placeholder="Phone" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <i class="validation-msg validation-phone col-xs-12 col-sm-12 col-md-12 col-lg-12">! Please write your name</i>
-                </div>
-                <div class="input-field col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="label-icon">
-                        <i class="material-icons prefix col-xs-2 col-sm-2 col-md-2 col-lg-2">email</i>
-                        <label for="email" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">E-mail</label>
+                    <div class="input-field col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="label-icon">
+                            <i class="material-icons prefix col-xs-2 col-sm-2 col-md-2 col-lg-2">email</i>
+                            <label for="email" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">E-mail</label>
+                        </div>
+                        <input  type="email" name="email" placeholder="Email" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" required>
+                        <i class="validation-msg validation-email col-xs-12 col-sm-12 col-md-12 col-lg-12">! Please write your e-mail</i>
                     </div>
-                    <input  type="email" name="email" placeholder="Email" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <i class="validation-msg validation-email col-xs-12 col-sm-12 col-md-12 col-lg-12">! Please write your e-mail</i>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <button >SEND IT</button>
+                    <!--    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">SEND IT</button> -->
+                    </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                 <button >SEND IT</button>
-             <!--    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">SEND IT</button> -->
-                </div>
-            </div>
-        </form>
-    </section>
+            </form>
+        </section>
     <div class="line"></div>
 
   <!-- Load Facebook SDK for JavaScript -->

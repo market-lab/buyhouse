@@ -59,7 +59,7 @@ $( document ).ready(function(){
 
         // Group lead form information
         var lead = {
-            'title': "Marketlab",
+            'title': $form.find('input[name="page_id"]').val().toString(),
             'person_id': $form.find('input[name="name"]').val().toString(),
             '0f94af856946affa1bc35154710b168c74440b7f': $form.find('input[name="phone"]').val().toString(),
             '59c0a401c5cfd30d1ca8d865a83ce56617221102': $form.find('input[name="email"]').val().toString()
