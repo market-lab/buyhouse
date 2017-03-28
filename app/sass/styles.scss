@@ -580,6 +580,7 @@ header {
             @media only screen and (max-width: 450px) { max-width: 94%; }
             @media only screen and (max-width: 990px) { margin: 20px auto; }
             .step-card-header {
+                padding: 0 5px;
                 h3 {
                     font-family: 'Raleway', sans-serif;
                     text-align: center;
@@ -588,6 +589,27 @@ header {
                     font-size: 1.8em;
                     padding: 12px 0;
                     margin: 0 0 0 30px;  }
+
+               .or {
+                margin: 20px 0;
+                padding: 5px;
+                font-size: 18px;
+                color: $dark-grey; }
+
+               button {
+                   height: 40px;
+                   font-size: 15px;
+                   font-weight: 600;
+                   margin: 20px 0;
+                   padding: 5px;
+                   @include transition(all 0.3s);
+                   &:hover {
+                       @include transition(all 0.3s);
+                       @include box-shadow(0, 3px, 5px, 0, rgba(0, 0, 0, 0.5)); }
+                  @media only screen and (max-width: 350px) {
+                    padding: 5px;
+                    font-size: 14px; }
+               }
 
                 i {
                     font-size: 40px;
@@ -614,6 +636,11 @@ header {
             span {
                 font-family: 'Martel', serif;
                 font-size: 30px;
+                position: relative;
+                background: #fff;
+                border-bottom: 1px solid #d1d1d1;
+                padding: 0 12px !important;
+                top: 153px !important;
                 color: $blue;
                 padding: 0;
             }
@@ -672,24 +699,7 @@ header {
            top: 50% !important;
            @include translate(-10%, -50%);
            }
-           button {
-               height: 40px !important;
-               background: #fff !important;
-               color: $blue !important;
-               font-size: 18px !important;
-               font-weight: 600 !important;
-               @include linearGradient(#fff, #e1e1e1);
-               border: 1px solid #d1d1d1 !important;
-               @include border-radius (2px);
-               margin: 0 0 20px 20px !important;
-               padding: 5px 15px !important;
-               opacity: 1 !important;
-               @include transition(all 0.3s);
-               &:hover {
-                   @include linearGradient(#e1e1e1, #e1e1e1);
-                   @include transition(all 0.3s);
-                   @include box-shadow(0, 3px, 5px, 0, rgba(0, 0, 0, 0.5)); }
-           }
+
        }
    }
 }
