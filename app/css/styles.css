@@ -625,7 +625,7 @@ header {
           color: #636363; }
         #sell-your-house .step-cards .step-card .step-card-header button {
           height: 40px;
-          font-size: 15px;
+          font-size: 14px;
           font-weight: 600;
           margin: 20px 0;
           padding: 5px;
@@ -643,10 +643,6 @@ header {
             -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
             -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
             box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5); }
-          @media only screen and (max-width: 350px) {
-            #sell-your-house .step-cards .step-card .step-card-header button {
-              padding: 5px;
-              font-size: 14px; } }
         #sell-your-house .step-cards .step-card .step-card-header i {
           font-size: 40px;
           padding: 22px 5px;

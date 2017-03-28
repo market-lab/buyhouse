@@ -598,7 +598,7 @@ header {
 
                button {
                    height: 40px;
-                   font-size: 15px;
+                   font-size: 14px;
                    font-weight: 600;
                    margin: 20px 0;
                    padding: 5px;
@@ -606,9 +606,6 @@ header {
                    &:hover {
                        @include transition(all 0.3s);
                        @include box-shadow(0, 3px, 5px, 0, rgba(0, 0, 0, 0.5)); }
-                  @media only screen and (max-width: 350px) {
-                    padding: 5px;
-                    font-size: 14px; }
                }
 
                 i {
