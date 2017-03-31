@@ -122,6 +122,7 @@ body {
 .no-margin-side{
     margin-left: 0 !important;
     margin-right: 0 !important; }
+
 /* Remove input highlight */
 input:focus,
 select:focus,
@@ -439,12 +440,12 @@ header {
         @media only screen and ( max-width: 1500px ) {
             -webkit-clip-path: polygon(0 0, 550px 0, 620px 100%, 0% 100%);
             clip-path: polygon(0 0, 550px 0, 620px 100%, 0% 100%);
-        }
-        @media only screen and ( max-width: 1200px ) {
-            -webkit-clip-path: polygon(0 0, 550px 0, 620px 100%, 0% 100%);
-            clip-path: polygon(0 0, 520px 0, 580px 100%, 0% 100%);
-        }
+        }        
         @media only screen and ( max-width: 992px ) {display: none;}
+    }
+
+    .mask-form{
+        height: 659px;
     }
 
     .h1-desktop { @media only screen and ( max-width: 992px ) { display:none; } }
@@ -492,17 +493,18 @@ header {
             margin: 0;
             display: block;
             line-height: 1.4em;
-            padding: 15px 50px;
-            b { font-size: 1.3em; }
+            padding: 15px 50px;            
 
             @media only screen and ( max-width: 992px ) {
                 text-align: center;
                  font-size: 1.4em;
                 max-width: 100%;
-                padding: 15px 20px;
+                padding: 15px 20px 0;
             }
 
             @media only screen and (max-width: 330px) { padding: 10px; }
+
+            b { font-size: 1.3em; }
         }
 
         a{
@@ -521,6 +523,104 @@ header {
             }
         }
     }
+
+    form {
+        
+        max-width: 600px;
+        
+        @media only screen and (max-width: 992px) { margin: 0 auto;}
+
+        button {
+            width: 200px;
+            height: 60px;
+            border: 2px solid #fff;
+            display: block;
+            margin: 20px auto;
+            color: #fff;
+            font-size: 30px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            background-color: rgba(52, 167, 215, 0.95);
+            @include transition(all, 0.3s);
+        
+            i { @include translateY(4px); }
+            
+            &:hover {
+                @include transition(all, 0.3s);
+                background-color: #fff;
+                color: rgba(52, 167, 215, 0.95);                
+                i { color: #fff;}
+            }
+        }
+    
+        .form-inputs{
+            width: 500px;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto 0 auto;
+            .input-field {
+                margin-bottom: 15px;
+                input {
+                    border: 1px solid $dark-blue ;
+                    border-left: 1px solid $dark-blue ;
+                    margin: 10px 3% 0 3%;
+                    box-sizing: border-box;
+                    height: 40px;
+                    width: 600px;
+                    max-width: 75%;
+                    @include transition(all 0.5s);
+                    &:focus {
+                        @include box-shadow(0px, 2px, 6px, 0px,  rgba(0, 0, 0, 0.3) )
+                        max-width: 80%;
+                        border: none;
+                        border-left: 4px solid $dark-blue;
+                        box-sizing: border-box;
+                        margin: 10px 1% 0 1%;
+                        @include transition(all 0.5s);
+                    }
+                }
+            }
+        }
+
+        .label-icon {
+            padding-bottom: 10px;
+            
+            i {
+                padding-bottom: 0 !important;
+                width: 40px;
+                @include translateY(10px);                
+            }
+        }
+
+        .input-field label {
+            color: #fff;
+            margin-bottom: 0;
+            margin-top: 8px;
+            max-width: 100px;
+            padding: 0 !important;
+            font-size: 20px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+        }
+
+        .input-field .prefix.active {color: $blue;}
+
+        .material-icons {
+            color: #fff;
+            padding: 5px;
+            font-size: 30px;
+            margin-left: 7px;
+        }
+
+        .validation-msg { color: red; }
+        .validation-name { display:none; }
+        .validation-phone { display:none; }
+        .validation-email { display:none; }
+    }
+
+
+
+
 }
 
 
@@ -845,116 +945,124 @@ header {
 
 
 #contact {
-  background-color: $blue;
-  padding-top: 30px;
-  padding-bottom: 40px;
-  h2{
-    color: #fff;
-    font-size: 2.5em;
-    line-height: 50px;
-    padding: 10px;
-    letter-spacing: 1.5px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600; }
-  .margin-fix { margin-top: 10px; }
-  p {
-    font-size: 1.5em;
-    margin: 20px auto 10px auto;
-    max-width: 420px;
-    color: $dark-grey; }
-  form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px 10px;
-    background-color: #fff;
-    @include box-shadow (0, 7px, 15px, 0, rgba(0, 0, 0, 0.3));
-    button {
-        width: 200px;
-        height: 60px;
-        border: 2px solid $dark-blue;
-        display: block;
-        margin: 20px auto;
-        color: $dark-blue;
-        font-size: 30px;
+    background-color: $blue;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    h2{
+        color: #fff;
+        font-size: 2.5em;
+        line-height: 50px;
+        padding: 10px;
+        letter-spacing: 1.5px;
         font-family: 'Raleway', sans-serif;
-        font-weight: 600;
+        font-weight: 600; 
+    }
+    
+    .margin-fix { margin-top: 10px; }
+    
+    p {
+        font-size: 1.5em;
+        margin: 20px auto 10px auto;
+        max-width: 420px;
+        color: $dark-grey; 
+    }
+    
+    form {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px 10px;
         background-color: #fff;
-        @include transition(all, 0.3s);
-         i { @include translateY(4px); }
-        &:hover {
+        @include box-shadow (0, 7px, 15px, 0, rgba(0, 0, 0, 0.3));
+        
+        button {
+            width: 200px;
+            height: 60px;
+            border: 2px solid $dark-blue;
+            display: block;
+            margin: 20px auto;
+            color: $dark-blue;
+            font-size: 30px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            background-color: #fff;
             @include transition(all, 0.3s);
-            background-color: $dark-blue;
-            color: #fff;
-            i { color: #fff; }
-
+        
+            i { @include translateY(4px); }
+            
+            &:hover {
+                @include transition(all, 0.3s);
+                background-color: $dark-blue;
+                color: #fff;
+                i { color: #fff;}
             }
         }
-    }
-    .form-inputs{
-        width: 500px;
-        max-width: 100%;
-        display: block;
-        margin: 20px auto 0 auto !important;
-        .input-field {
-            margin-bottom: 15px;
-            input {
-                border: 1px solid $dark-blue ;
-                border-left: 1px solid $dark-blue ;
-                margin: 10px 3% 0 3%;
-                box-sizing: border-box;
-                height: 40px;
-                width: 600px;
-                max-width: 94%;
-                @include transition(all 0.5s);
-                &:focus {
-                    @include box-shadow(0px, 2px, 6px, 0px,  rgba(0, 0, 0, 0.3) )
-                    max-width: 98%;
-                    border: none;
-                    border-left: 4px solid $dark-blue;
+    
+        .form-inputs{
+            width: 500px;
+            max-width: 100%;
+            display: block;
+            margin: 20px auto 0 auto !important;
+            .input-field {
+                margin-bottom: 15px;
+                input {
+                    border: 1px solid $dark-blue ;
+                    border-left: 1px solid $dark-blue ;
+                    margin: 10px 3% 0 3%;
                     box-sizing: border-box;
-                    margin: 10px 1% 0 1%;
+                    height: 40px;
+                    width: 600px;
+                    max-width: 94%;
                     @include transition(all 0.5s);
+                    &:focus {
+                        @include box-shadow(0px, 2px, 6px, 0px,  rgba(0, 0, 0, 0.3) )
+                        max-width: 98%;
+                        border: none;
+                        border-left: 4px solid $dark-blue;
+                        box-sizing: border-box;
+                        margin: 10px 1% 0 1%;
+                        @include transition(all 0.5s);
+                    }
                 }
             }
         }
-    }
 
-
-    .label-icon {
-        padding-bottom: 10px;
-        i {
-            padding-bottom: 0 !important;
-            width: 40px;
-            margin-right: 5px;
+        .label-icon {
+            padding-bottom: 10px;
+            
+            i {
+                padding-bottom: 0 !important;
+                width: 40px;
+                margin-right: 5px;
+            }
         }
-    }
 
-    .input-field label {
-        color: $dark-blue;
-        margin-bottom: 0;
-        margin-top: 8px;
-        max-width: 100px;
-        padding: 0 !important;
-        font-size: 20px;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 400;
-    }
+        .input-field label {
+            color: $dark-blue;
+            margin-bottom: 0;
+            margin-top: 8px;
+            max-width: 100px;
+            padding: 0 !important;
+            font-size: 20px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+        }
 
+        .input-field .prefix.active {color: $blue;}
 
-    .input-field .prefix.active {
-        color: $blue;
-    }
-    .material-icons {
-        color: $dark-blue;
-        padding: 5px;
-        font-size: 30px;
-        margin-left: 7px;
+        .material-icons {
+            color: $dark-blue;
+            padding: 5px;
+            font-size: 30px;
+            margin-left: 7px;
+        }
+
+        .validation-msg { color: red; }
+        .validation-name { display:none; }
+        .validation-phone { display:none; }
+        .validation-email { display:none; }
     }
 }
-.validation-msg { color: red; }
-.validation-name { display:none; }
-.validation-phone { display:none; }
-.validation-email { display:none; }
+
 
 /* Footer */
 
