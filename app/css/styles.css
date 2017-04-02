@@ -591,6 +591,7 @@ header {
           height: 40px;
           width: 600px;
           max-width: 75%;
+          color: #333;
           -webkit-transition: all 0.5s;
           -moz-transition: all 0.5s;
           -ms-transition: all 0.5s;
