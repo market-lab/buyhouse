@@ -452,13 +452,11 @@ header {
       header .mask {
         -webkit-clip-path: polygon(0 0, 550px 0, 620px 100%, 0% 100%);
         clip-path: polygon(0 0, 550px 0, 620px 100%, 0% 100%); } }
-    @media only screen and (max-width: 1200px) {
-      header .mask {
-        -webkit-clip-path: polygon(0 0, 550px 0, 620px 100%, 0% 100%);
-        clip-path: polygon(0 0, 520px 0, 580px 100%, 0% 100%); } }
     @media only screen and (max-width: 992px) {
       header .mask {
         display: none; } }
+  header .mask-form {
+    height: 659px; }
   @media only screen and (max-width: 992px) {
     header .h1-desktop {
       display: none; } }
@@ -514,17 +512,17 @@ header {
       display: block;
       line-height: 1.4em;
       padding: 15px 50px; }
-      header .header-content p b {
-        font-size: 1.3em; }
       @media only screen and (max-width: 992px) {
         header .header-content p {
           text-align: center;
           font-size: 1.4em;
           max-width: 100%;
-          padding: 15px 20px; } }
+          padding: 15px 20px 0; } }
       @media only screen and (max-width: 330px) {
         header .header-content p {
           padding: 10px; } }
+      header .header-content p b {
+        font-size: 1.3em; }
     header .header-content a {
       padding: 0 50px;
       margin: 0 auto; }
@@ -541,6 +539,111 @@ header {
         @media only screen and (max-width: 360px) {
           header .header-content a button {
             font-size: 19px; } }
+  header form {
+    max-width: 600px; }
+    @media only screen and (max-width: 992px) {
+      header form {
+        margin: 0 auto; } }
+    header form button {
+      width: 200px;
+      height: 60px;
+      border: 2px solid #fff;
+      display: block;
+      margin: 20px auto;
+      color: #fff;
+      font-size: 30px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      background-color: rgba(52, 167, 215, 0.95);
+      -webkit-transition: all, 0.3s;
+      -moz-transition: all, 0.3s;
+      -ms-transition: all, 0.3s;
+      -o-transition: all, 0.3s;
+      transition: all, 0.3s; }
+      header form button i {
+        -webkit-transform: translateY(4px);
+        -moz-transform: translateY(4px);
+        -o-transform: translateY(4px);
+        -ms-transform: translateY(4px);
+        transform: translateY(4px); }
+      header form button:hover {
+        -webkit-transition: all, 0.3s;
+        -moz-transition: all, 0.3s;
+        -ms-transition: all, 0.3s;
+        -o-transition: all, 0.3s;
+        transition: all, 0.3s;
+        background-color: #fff;
+        color: rgba(52, 167, 215, 0.95); }
+        header form button:hover i {
+          color: #fff; }
+    header form .form-inputs {
+      width: 500px;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto 0 auto; }
+      header form .form-inputs .input-field {
+        margin-bottom: 15px; }
+        header form .form-inputs .input-field input {
+          border: 1px solid #0470BA;
+          border-left: 1px solid #0470BA;
+          margin: 10px 3% 0 3%;
+          box-sizing: border-box;
+          height: 40px;
+          width: 600px;
+          max-width: 75%;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s; }
+          header form .form-inputs .input-field input:focus {
+            -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+            max-width: 80%;
+            border: none;
+            border-left: 4px solid #0470BA;
+            box-sizing: border-box;
+            margin: 10px 1% 0 1%;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s; }
+    header form .label-icon {
+      padding-bottom: 10px; }
+      header form .label-icon i {
+        padding-bottom: 0 !important;
+        width: 40px;
+        -webkit-transform: translateY(10px);
+        -moz-transform: translateY(10px);
+        -o-transform: translateY(10px);
+        -ms-transform: translateY(10px);
+        transform: translateY(10px); }
+    header form .input-field label {
+      color: #fff;
+      margin-bottom: 0;
+      margin-top: 8px;
+      max-width: 100px;
+      padding: 0 !important;
+      font-size: 20px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400; }
+    header form .input-field .prefix.active {
+      color: #0470BA; }
+    header form .material-icons {
+      color: #fff;
+      padding: 5px;
+      font-size: 30px;
+      margin-left: 7px; }
+    header form .validation-msg {
+      color: red; }
+    header form .validation-name {
+      display: none; }
+    header form .validation-phone {
+      display: none; }
+    header form .validation-email {
+      display: none; }
 
 /* About */
 #about {
@@ -608,56 +711,29 @@ header {
       @media only screen and (max-width: 990px) {
         #sell-your-house .step-cards .step-card {
           margin: 20px auto; } }
-      #sell-your-house .step-cards .step-card .step-card-header {
-        padding: 0 5px; }
-        #sell-your-house .step-cards .step-card .step-card-header h3 {
-          font-family: 'Raleway', sans-serif;
-          text-align: center;
-          display: inline-block;
-          color: #0470BA;
-          font-size: 1.8em;
-          padding: 12px 0;
-          margin: 0 0 0 30px; }
-        #sell-your-house .step-cards .step-card .step-card-header .or {
-          margin: 20px 0;
-          padding: 5px;
-          font-size: 18px;
-          color: #636363; }
-        #sell-your-house .step-cards .step-card .step-card-header button {
-          height: 40px;
-          font-size: 14px;
-          font-weight: 600;
-          margin: 20px 0;
-          padding: 5px;
-          -webkit-transition: all 0.3s;
-          -moz-transition: all 0.3s;
-          -ms-transition: all 0.3s;
-          -o-transition: all 0.3s;
-          transition: all 0.3s; }
-          #sell-your-house .step-cards .step-card .step-card-header button:hover {
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
-            -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
-            -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
-            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5); }
-        #sell-your-house .step-cards .step-card .step-card-header i {
-          font-size: 40px;
-          padding: 22px 5px;
-          margin-right: 20px;
-          color: #00d172;
-          float: right;
-          -webkit-transition: color 0.4s;
-          -moz-transition: color 0.4s;
-          -ms-transition: color 0.4s;
-          -o-transition: color 0.4s;
-          transition: color 0.4s; }
-        #sell-your-house .step-cards .step-card .step-card-header .off {
-          display: inline-block; }
-        #sell-your-house .step-cards .step-card .step-card-header .active-btn {
-          display: none; }
+      #sell-your-house .step-cards .step-card .step-card-header h3 {
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+        display: inline-block;
+        color: #0470BA;
+        font-size: 1.8em;
+        padding: 12px 0;
+        margin: 0 0 0 30px; }
+      #sell-your-house .step-cards .step-card .step-card-header i {
+        font-size: 40px;
+        padding: 22px 5px;
+        margin-right: 20px;
+        color: #00d172;
+        float: right;
+        -webkit-transition: color 0.4s;
+        -moz-transition: color 0.4s;
+        -ms-transition: color 0.4s;
+        -o-transition: color 0.4s;
+        transition: color 0.4s; }
+      #sell-your-house .step-cards .step-card .step-card-header .off {
+        display: inline-block; }
+      #sell-your-house .step-cards .step-card .step-card-header .active-btn {
+        display: none; }
       #sell-your-house .step-cards .step-card .step-img {
         width: 100%;
         padding: 0;
@@ -695,11 +771,6 @@ header {
       #sell-your-house .step-cards .step-card span {
         font-family: 'Martel', serif;
         font-size: 30px;
-        position: relative;
-        background: #fff;
-        border-bottom: 1px solid #d1d1d1;
-        padding: 0 12px !important;
-        top: 153px !important;
         color: #0470BA;
         padding: 0; }
       #sell-your-house .step-cards .step-card .step-card-hover {
@@ -784,6 +855,65 @@ header {
         -o-transform: translate(-10%, -50%);
         -ms-transform: translate(-10%, -50%);
         transform: translate(-10%, -50%); } }
+    .step-hover .step-card-hover .contact-buttons button {
+      height: 40px !important;
+      background: #fff !important;
+      color: #0470BA !important;
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      background: #fff;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #fff 0%, #e1e1e1 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #e1e1e1));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #fff 0%, #e1e1e1 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #fff 0%, #e1e1e1 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #fff 0%, #e1e1e1 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #fff 0%, #e1e1e1 100%);
+      /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+      /* IE6-9 */
+      border: 1px solid #d1d1d1 !important;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      margin: 0 0 20px 20px !important;
+      padding: 5px 15px !important;
+      opacity: 1 !important;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+      .step-hover .step-card-hover .contact-buttons button:hover {
+        background: #e1e1e1;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e1e1e1), color-stop(100%, #e1e1e1));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #e1e1e1 0%, #e1e1e1 100%);
+        /* IE10+ */
+        background: linear-gradient(to bottom, #e1e1e1 0%, #e1e1e1 100%);
+        /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+        /* IE6-9 */
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5); }
 
 /* Advantages */
 #advantages {
@@ -998,74 +1128,70 @@ header {
         color: #fff; }
         #contact form button:hover i {
           color: #fff; }
-  #contact .form-inputs {
-    width: 500px;
-    max-width: 100%;
-    display: block;
-    margin: 20px auto 0 auto !important; }
-    #contact .form-inputs .input-field {
-      margin-bottom: 15px; }
-      #contact .form-inputs .input-field input {
-        border: 1px solid #0470BA;
-        border-left: 1px solid #0470BA;
-        margin: 10px 3% 0 3%;
-        box-sizing: border-box;
-        height: 40px;
-        width: 600px;
-        max-width: 94%;
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        -ms-transition: all 0.5s;
-        -o-transition: all 0.5s;
-        transition: all 0.5s; }
-        #contact .form-inputs .input-field input:focus {
-          -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
-          -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
-          max-width: 98%;
-          border: none;
-          border-left: 4px solid #0470BA;
+    #contact form .form-inputs {
+      width: 500px;
+      max-width: 100%;
+      display: block;
+      margin: 20px auto 0 auto !important; }
+      #contact form .form-inputs .input-field {
+        margin-bottom: 15px; }
+        #contact form .form-inputs .input-field input {
+          border: 1px solid #0470BA;
+          border-left: 1px solid #0470BA;
+          margin: 10px 3% 0 3%;
           box-sizing: border-box;
-          margin: 10px 1% 0 1%;
+          height: 40px;
+          width: 600px;
+          max-width: 94%;
           -webkit-transition: all 0.5s;
           -moz-transition: all 0.5s;
           -ms-transition: all 0.5s;
           -o-transition: all 0.5s;
           transition: all 0.5s; }
-  #contact .label-icon {
-    padding-bottom: 10px; }
-    #contact .label-icon i {
-      padding-bottom: 0 !important;
-      width: 40px;
-      margin-right: 5px; }
-  #contact .input-field label {
-    color: #0470BA;
-    margin-bottom: 0;
-    margin-top: 8px;
-    max-width: 100px;
-    padding: 0 !important;
-    font-size: 20px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400; }
-  #contact .input-field .prefix.active {
-    color: #0470BA; }
-  #contact .material-icons {
-    color: #0470BA;
-    padding: 5px;
-    font-size: 30px;
-    margin-left: 7px; }
-
-.validation-msg {
-  color: red; }
-
-.validation-name {
-  display: none; }
-
-.validation-phone {
-  display: none; }
-
-.validation-email {
-  display: none; }
+          #contact form .form-inputs .input-field input:focus {
+            -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+            max-width: 98%;
+            border: none;
+            border-left: 4px solid #0470BA;
+            box-sizing: border-box;
+            margin: 10px 1% 0 1%;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s; }
+    #contact form .label-icon {
+      padding-bottom: 10px; }
+      #contact form .label-icon i {
+        padding-bottom: 0 !important;
+        width: 40px;
+        margin-right: 5px; }
+    #contact form .input-field label {
+      color: #0470BA;
+      margin-bottom: 0;
+      margin-top: 8px;
+      max-width: 100px;
+      padding: 0 !important;
+      font-size: 20px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400; }
+    #contact form .input-field .prefix.active {
+      color: #0470BA; }
+    #contact form .material-icons {
+      color: #0470BA;
+      padding: 5px;
+      font-size: 30px;
+      margin-left: 7px; }
+    #contact form .validation-msg {
+      color: red; }
+    #contact form .validation-name {
+      display: none; }
+    #contact form .validation-phone {
+      display: none; }
+    #contact form .validation-email {
+      display: none; }
 
 /* Footer */
 footer #logo-footer {
